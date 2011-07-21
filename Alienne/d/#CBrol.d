@@ -12,16 +12,16 @@ END
 
 IF ~Global("#CQuestPart","GLOBAL",4)NumTimesTalkedTo(0)~ THEN BEGIN InitialTalk2
 SAY ~Verschwindet, ich habe keine Lust mich mit Gesindel wie Euch abzugeben!~
-IF ~Class(LastTalkedToBy,MAGE_ALL)~ THEN REPLY ~Ich bin auf der Suche nach einem vermissten Mädchen, vielleicht könntet ihr mir helfen MAGE.~ GOTO Mage
-IF ~!Class(LastTalkedToBy,MAGE_ALL)~ THEN REPLY ~Ich bin auf der Suche nach einem vermissten Mädchen, vielleicht könntet Ihr mir helfen NO MAGE.~ GOTO Girl
+IF ~Class(LastTalkedToBy,MAGE_ALL)~ THEN REPLY ~Ich bin auf der Suche nach einem vermissten Mädchen, vielleicht könntet ihr mir helfen.~ GOTO Mage
+IF ~!Class(LastTalkedToBy,MAGE_ALL)~ THEN REPLY ~Ich bin auf der Suche nach einem vermissten Mädchen, vielleicht könntet Ihr mir helfen.~ GOTO Girl
 IF ~~ THEN REPLY ~Hütet Eure Zunge, oder ich schneide sie Euch heraus!~ GOTO Fight
 IF ~~ THEN REPLY ~Verzeiht die Störung, ich werde Euch in Ruhe lassen.~ GOTO EndTalk
 END 
 
 IF ~Global("#CQuestPart","GLOBAL",4)NumTimesTalkedToGT(0)~ THEN BEGIN Talk3
 SAY ~Ihr schon wieder? Verschwindet, bevor ihr meine Stiefel zu spüren bekommt!~
-IF ~Class(LastTalkedToBy,MAGE_ALL)~ THEN REPLY ~Ich bin auf der Suche nach einem vermissten Mädchen, vielleicht könntet ihr mir helfen MAGE.~ GOTO Mage
-IF ~!Class(LastTalkedToBy,MAGE_ALL)~ THEN REPLY ~Ich bin auf der Suche nach einem vermissten Mädchen, vielleicht könntet Ihr mir helfen NO MAGE.~ GOTO Girl
+IF ~Class(LastTalkedToBy,MAGE_ALL)~ THEN REPLY ~Ich bin auf der Suche nach einem vermissten Mädchen, vielleicht könntet ihr mir helfen.~ GOTO Mage
+IF ~!Class(LastTalkedToBy,MAGE_ALL)~ THEN REPLY ~Ich bin auf der Suche nach einem vermissten Mädchen, vielleicht könntet Ihr mir helfen.~ GOTO Girl
 IF ~~ THEN REPLY ~Hütet Eure Zunge, oder ich schneide sie Euch heraus!~ GOTO Fight
 IF ~~ THEN REPLY ~Verzeiht die Störung, ich werde Euch in Ruhe lassen.~ GOTO EndTalk
 END
