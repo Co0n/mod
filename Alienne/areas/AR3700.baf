@@ -1,7 +1,7 @@
 IF
-GLOBAL("#CTALDRExists","AR3700",0)
+GLOBAL("CO#TALDRExists","AR3700",0)
 THEN
 RESPONSE #100
-SetGlobal("#CTALDRExists","AR3700",1)
-CreateCreature("#CTaldr",[3125.1637],3)
+SetGlobal("CO#TALDRExists","AR3700",1)
+CreateCreature("CO#Taldr",[3125.1637],3)
 END

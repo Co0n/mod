@@ -1,7 +1,7 @@
 IF
-GLOBAL("#CMELVINExists","AR6700",0)
+GLOBAL("CO#MELVINExists","AR6700",0)
 THEN
 RESPONSE #100
-SetGlobal("#CMELVINExists","AR6700",3)
-CreateCreature("#CMelvin",[1997.2016],3)
+SetGlobal("CO#MELVINExists","AR6700",3)
+CreateCreature("CO#Melvin",[1997.2016],3)
 END

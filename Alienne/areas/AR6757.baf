@@ -1,7 +1,7 @@
 IF
-GLOBAL("#CBROLExists","AR6757",0)
+GLOBAL("CO#BROLExists","AR6757",0)
 THEN
 RESPONSE #100
-SetGlobal("#CBROLExists","AR6757",1)
-CreateCreature("#CBrol",[668.304],3)
+SetGlobal("CO#BROLExists","AR6757",1)
+CreateCreature("CO#Brol",[668.304],3)
 END

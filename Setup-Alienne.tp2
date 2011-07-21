@@ -6,16 +6,16 @@ BEGIN ~Alienne for BGT~
 // Setup Taldrin \\
 // ############# \\
 
-COPY ~Alienne/cre/#CTALDR.cre~ ~override/#CTALDR.cre~
+COPY ~Alienne/cre/CO#TALDR.cre~ ~override/CO#TALDR.cre~
 
 // Name
 SAY NAME1 ~Taldrin~
 SAY NAME2 ~Taldrin~
 
-COMPILE ~Alienne/d/#CTaldr.d~
-COMPILE ~Alienne/d/#CWirt1.d~ 
-COMPILE ~Alienne/d/#CWirt2.d~
-COMPILE ~Alienne/d/#CWirt3.d~
+COMPILE ~Alienne/d/CO#Taldr.d~
+COMPILE ~Alienne/d/CO#Wirt1.d~ 
+COMPILE ~Alienne/d/CO#Wirt2.d~
+COMPILE ~Alienne/d/CO#Wirt3.d~
 
 // Area: Nashkel
 EXTEND_TOP ~AR3700.bcs~ ~Alienne/areas/AR3700.baf~ 
@@ -24,12 +24,12 @@ EXTEND_TOP ~AR3700.bcs~ ~Alienne/areas/AR3700.baf~
 // Setup Brol \\
 // ########## \\
 
-COPY ~Alienne/cre/#CBROL.cre~ ~override/#CBROL.cre~
+COPY ~Alienne/cre/CO#BROL.cre~ ~override/CO#BROL.cre~
 
 SAY NAME1 ~Brol~
 SAY NAME2 ~Brol~
 
-COMPILE ~Alienne/d/#CBrol.d~
+COMPILE ~Alienne/d/CO#Brol.d~
 
 EXTEND_TOP ~AR6757.bcs~ ~Alienne/areas/AR6757.baf~ 
 
@@ -37,7 +37,7 @@ EXTEND_TOP ~AR6757.bcs~ ~Alienne/areas/AR6757.baf~
 // Setup Item: Brols Befehle \\
 // ######################### \\
 
-COPY ~Alienne/itm/#Cscrl1.itm~ ~override~
+COPY ~Alienne/itm/CO#scrl1.itm~ ~override~
 
 SAY NAME1 ~Brols Befehle~
 SAY NAME2 ~Brols Befehle~
@@ -63,11 +63,11 @@ Gezeichnet Z~
 // Setup Melvin \\
 // ############ \\
 
-//COPY ~Alienne/cre/#CMELVIN.cre~ ~override/#CMELVIN.cre~
+//COPY ~Alienne/cre/CO#MELV.cre~ ~override/CO#MELV.cre~
 
 //SAY NAME1 ~Melvin~
 //SAY NAME2 ~Melvin~
 
-//COMPILE ~Alienne/d/#CMelvin.d~
+//COMPILE ~Alienne/d/CO#Melv.d~
 
-//EXTEND_TOP ~AR6757.bcs~ ~Alienne/areas/AR6757.baf~
+//EXTEND_TOP ~AR6700.bcs~ ~Alienne/areas/AR6700.baf~
