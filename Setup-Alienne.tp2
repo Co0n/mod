@@ -6,22 +6,19 @@ BEGIN ~Alienne for BGT~
 // Setup Taldrin \\
 // ############# \\
 
-COPY ~Alienne/cre/#CTESTI.cre~ ~override/#CTESTI.cre~
+COPY ~Alienne/cre/#CTALDR.cre~ ~override/#CTALDR.cre~
 
 // Name
 SAY NAME1 ~Taldrin~
 SAY NAME2 ~Taldrin~
 
-COMPILE ~Alienne/d/#CTesti.d~
+COMPILE ~Alienne/d/#CTaldr.d~
 COMPILE ~Alienne/d/#CWirt1.d~ 
 COMPILE ~Alienne/d/#CWirt2.d~
 COMPILE ~Alienne/d/#CWirt3.d~
 
 // Area: Nashkel
 EXTEND_TOP ~AR3700.bcs~ ~Alienne/areas/AR3700.baf~ 
-
-COPY ~Alienne/Portraits/aeril.bmp~ ~override/aeril.bmp~
-     ~Alienne/Portraits/aeriS.bmp~ ~override/aeriS.bmp~
 
 // ########## \\
 // Setup Brol \\
