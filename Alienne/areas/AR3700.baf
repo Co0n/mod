@@ -1,0 +1,7 @@
+IF
+GLOBAL("#CTESTIExists","AR3700",0)
+THEN
+RESPONSE #100
+SetGlobal("#CTESTIExists","AR3700",1)
+CreateCreature("#CTesti",[3125.1637],3)
+END
