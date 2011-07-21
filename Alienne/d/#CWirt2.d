@@ -1,12 +1,12 @@
 EXTEND_TOP BART13 0 #1
-IF ~Global("#CQuestPart","GLOBAL",3)~ THEN REPLY ~Habt ihr in letzter Zeit neue G‰ste? Ich suche eine Gruppe Reisender die ein Elfenm‰dchen bei sich haben.~ GOTO Answer
+IF ~Global("#CQuestPart","GLOBAL",3)~ THEN REPLY ~Habt ihr in letzter Zeit neue G√§ste? Ich suche eine Gruppe Reisender die ein Elfenm√§dchen bei sich haben.~ GOTO Answer
 END
 
 APPEND BART13
 IF ~~ THEN BEGIN Answer
-SAY ~Ein Elfenm‰dchen sagt Ihr? In den letzten Tagen angekommen?
+SAY ~Ein Elfenm√§dchen sagt Ihr? In den letzten Tagen angekommen?
 ...~
-= ~Wollt Ihr mich verspotten? Die Straﬂe ist in letzter Zeit viel zu gef‰hrlich f¸r einfache Reisende. Auﬂer den Trunkenbolden die hier ohnehin den ganzen Tag herumlungern habe ich niemanden hier gesehen.
+= ~Wollt Ihr mich verspotten? Die Stra√üe ist in letzter Zeit viel zu gef√§hrlich f√ºr einfache Reisende. Au√üer den Trunkenbolden die hier ohnehin den ganzen Tag herumlungern habe ich niemanden hier gesehen.
 Wollt ihr nun etwas trinken oder nur weiter meine Zeit vergeuden?~
 IF ~~ THEN EXIT
 END

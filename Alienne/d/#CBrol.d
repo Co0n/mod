@@ -6,133 +6,133 @@ IF ~~ THEN EXIT
 END
 
 IF ~!Global("#CQuestPart","GLOBAL",4)NumTimesTalkedToGT(0)~ THEN BEGIN Talk2
-SAY ~Ihr schon wieder? Verschwindet, <RACE>, bevor ihr meine Stiefel zu spüren bekommt!~
+SAY ~Ihr schon wieder? Verschwindet, <RACE>, bevor ihr meine Stiefel zu spÃ¼ren bekommt!~
 IF ~~ THEN EXIT
 END
 
 IF ~Global("#CQuestPart","GLOBAL",4)NumTimesTalkedTo(0)~ THEN BEGIN InitialTalk2
 SAY ~Verschwindet, ich habe keine Lust mich mit Gesindel wie Euch abzugeben!~
-IF ~Class(LastTalkedToBy,MAGE_ALL)~ THEN REPLY ~Ich bin auf der Suche nach einem vermissten Mädchen, vielleicht könntet ihr mir helfen MAGE.~ GOTO Mage
-IF ~!Class(LastTalkedToBy,MAGE_ALL)~ THEN REPLY ~Ich bin auf der Suche nach einem vermissten Mädchen, vielleicht könntet Ihr mir helfen NO MAGE.~ GOTO Girl
-IF ~~ THEN REPLY ~Hütet Eure Zunge, oder ich schneide sie Euch heraus!~ GOTO Fight
-IF ~~ THEN REPLY ~Verzeiht die Störung, ich werde Euch in Ruhe lassen.~ GOTO EndTalk
+IF ~Class(LastTalkedToBy,MAGE_ALL)~ THEN REPLY ~Ich bin auf der Suche nach einem vermissten MÃ¤dchen, vielleicht kÃ¶nntet ihr mir helfen MAGE.~ GOTO Mage
+IF ~!Class(LastTalkedToBy,MAGE_ALL)~ THEN REPLY ~Ich bin auf der Suche nach einem vermissten MÃ¤dchen, vielleicht kÃ¶nntet Ihr mir helfen NO MAGE.~ GOTO Girl
+IF ~~ THEN REPLY ~HÃ¼tet Eure Zunge, oder ich schneide sie Euch heraus!~ GOTO Fight
+IF ~~ THEN REPLY ~Verzeiht die StÃ¶rung, ich werde Euch in Ruhe lassen.~ GOTO EndTalk
 END 
 
 IF ~Global("#CQuestPart","GLOBAL",4)NumTimesTalkedToGT(0)~ THEN BEGIN Talk3
-SAY ~Ihr schon wieder? Verschwindet, bevor ihr meine Stiefel zu spüren bekommt!~
-IF ~Class(LastTalkedToBy,MAGE_ALL)~ THEN REPLY ~Ich bin auf der Suche nach einem vermissten Mädchen, vielleicht könntet ihr mir helfen MAGE.~ GOTO Mage
-IF ~!Class(LastTalkedToBy,MAGE_ALL)~ THEN REPLY ~Ich bin auf der Suche nach einem vermissten Mädchen, vielleicht könntet Ihr mir helfen NO MAGE.~ GOTO Girl
-IF ~~ THEN REPLY ~Hütet Eure Zunge, oder ich schneide sie Euch heraus!~ GOTO Fight
-IF ~~ THEN REPLY ~Verzeiht die Störung, ich werde Euch in Ruhe lassen.~ GOTO EndTalk
+SAY ~Ihr schon wieder? Verschwindet, bevor ihr meine Stiefel zu spÃ¼ren bekommt!~
+IF ~Class(LastTalkedToBy,MAGE_ALL)~ THEN REPLY ~Ich bin auf der Suche nach einem vermissten MÃ¤dchen, vielleicht kÃ¶nntet ihr mir helfen MAGE.~ GOTO Mage
+IF ~!Class(LastTalkedToBy,MAGE_ALL)~ THEN REPLY ~Ich bin auf der Suche nach einem vermissten MÃ¤dchen, vielleicht kÃ¶nntet Ihr mir helfen NO MAGE.~ GOTO Girl
+IF ~~ THEN REPLY ~HÃ¼tet Eure Zunge, oder ich schneide sie Euch heraus!~ GOTO Fight
+IF ~~ THEN REPLY ~Verzeiht die StÃ¶rung, ich werde Euch in Ruhe lassen.~ GOTO EndTalk
 END
 
 IF ~~ THEN BEGIN Mage
-SAY ~(Brols gesamte Aufmerksamkeit richtet sich plötzlich auf Euch. Sein Blick wandert prüfend über Eure Kleidung.)~
-= ~Soso, ein Magier also? Ihr seid wohl ein Begleiter dieser Rotzgöre. Macht Euch keine Gedanken, Ihr werdet sie niemals finden. Genaugenommen werdet Ihr euch eh nie wieder Gedanken machen können!
-Ihr macht uns keine Probleme, für Begegnungen mit Eurer Sorte wurde ich ausgebildet…~
-IF ~~ THEN DO ~Enemy()SetGlobal("#CQuestPart","GLOBAL",5)~ UNSOLVED_JOURNAL %Aliennes Entfühung
+SAY ~(Brols gesamte Aufmerksamkeit richtet sich plÃ¶tzlich auf Euch. Sein Blick wandert prÃ¼fend Ã¼ber Eure Kleidung.)~
+= ~Soso, ein Magier also? Ihr seid wohl ein Begleiter dieser RotzgÃ¶re. Macht Euch keine Gedanken, Ihr werdet sie niemals finden. Genaugenommen werdet Ihr euch eh nie wieder Gedanken machen kÃ¶nnen!
+Ihr macht uns keine Probleme, fÃ¼r Begegnungen mit Eurer Sorte wurde ich ausgebildetâ€¦~
+IF ~~ THEN DO ~Enemy()SetGlobal("#CQuestPart","GLOBAL",5)~ UNSOLVED_JOURNAL %Aliennes EntfÃ¼hung
 
-Der Schankwirt der Roten Gabe verwies mich auf einen grimmigen Kerl namens Brol, der erst seit kurzem die Schenke besuchte. Mein Gespräch mit ihm verlief jedoch alles andere als hilfreich. Als er bemerkte, dass ich über magische Fähigkeiten verfüge griff er mich an.
-Er deutete an ein Magierkiller zu sein, ein Krieger der auf das Töten von Magiern spezialisiert ist. Offensichtlich brachte er uns in Verbindung mit dem Entführten Mädchen. Vielleicht finde ich einen entsprechenden Hinweis in seinem Gepäck.% EXIT
+Der Schankwirt der Roten Gabe verwies mich auf einen grimmigen Kerl namens Brol, der erst seit kurzem die Schenke besuchte. Mein GesprÃ¤ch mit ihm verlief jedoch alles andere als hilfreich. Als er bemerkte, dass ich Ã¼ber magische FÃ¤higkeiten verfÃ¼ge griff er mich an.
+Er deutete an ein Magierkiller zu sein, ein Krieger der auf das TÃ¶ten von Magiern spezialisiert ist. Offensichtlich brachte er uns in Verbindung mit dem EntfÃ¼hrten MÃ¤dchen. Vielleicht finde ich einen entsprechenden Hinweis in seinem GepÃ¤ck.% EXIT
 END
 
 IF ~~ THEN BEGIN Girl
 SAY ~Ich habe weder Zeit noch Lust mich mit solchen Dingen zu befassen.~
 IF ~CheckStatGT(LastTalkedToBy,16,36)~ THEN REPLY ~ Nun, wir haben nicht gerade viel Zeit und haben ebenso wenig Lust zu plaudern wie Ihr. Aber im Gegensatz zu euch sind wir schwer bewaffnet und kampfbereit.~ GOTO Threat
 IF ~CheckStatLT(LastTalkedToBy,17,36)~ THEN REPLY ~ Nun, wir haben nicht gerade viel Zeit und haben ebenso wenig Lust zu plaudern wie Ihr. Aber im Gegensatz zu euch sind wir schwer bewaffnet und kampfbereit.~ GOTO ThreatFail
-IF ~CheckStatGT(LastTalkedToBy,16,39)~ THEN REPLY ~ Ohne Euch zu nahe treten zu wollen, aber durch Euer ablehnendes Verhalten macht Ihr Euch äußerst verdächtig.~ GOTO Convince
-IF ~CheckStatLT(LastTalkedToBy,17,39)~ THEN REPLY ~ Ohne Euch zu nahe treten zu wollen, aber durch Euer ablehnendes Verhalten macht Ihr Euch äußerst verdächtig.~ GOTO ConvinceFail
-IF ~Global("#CCorrupt100","GLOBAL",0)~ THEN REPLY ~Nun, vielleicht kann das Klimpern von 100 Goldmünzen euch ja umstimmen?~ DO ~SetGlobal("#CCorrupt100","GLOBAL",1)TakePartyGold(100)~ GOTO CorruptFail100
-IF ~Global("#CCorrupt300","GLOBAL",0)~ THEN REPLY ~Wie wär’s mit 300 Goldmünzen, würde das Eure Zunge lockern?~ DO ~SetGlobal("#CCorrupt300","GLOBAL",1)TakePartyGold(300)~ GOTO CorruptFail300
-IF ~~ THEN REPLY ~Der Klang von 500 Goldmünzen sollte selbst in Euren Ohren wie Musik klingen, was wisst Ihr?~ DO ~TakePartyGold(500)~ GOTO Corrupt
-IF ~~ THEN REPLY ~Verzeiht die Störung, ich werde Euch in Ruhe lassen..~ GOTO EndTalk
+IF ~CheckStatGT(LastTalkedToBy,16,39)~ THEN REPLY ~ Ohne Euch zu nahe treten zu wollen, aber durch Euer ablehnendes Verhalten macht Ihr Euch Ã¤uÃŸerst verdÃ¤chtig.~ GOTO Convince
+IF ~CheckStatLT(LastTalkedToBy,17,39)~ THEN REPLY ~ Ohne Euch zu nahe treten zu wollen, aber durch Euer ablehnendes Verhalten macht Ihr Euch Ã¤uÃŸerst verdÃ¤chtig.~ GOTO ConvinceFail
+IF ~Global("#CCorrupt100","GLOBAL",0)~ THEN REPLY ~Nun, vielleicht kann das Klimpern von 100 GoldmÃ¼nzen euch ja umstimmen?~ DO ~SetGlobal("#CCorrupt100","GLOBAL",1)TakePartyGold(100)~ GOTO CorruptFail100
+IF ~Global("#CCorrupt300","GLOBAL",0)~ THEN REPLY ~Wie wÃ¤râ€™s mit 300 GoldmÃ¼nzen, wÃ¼rde das Eure Zunge lockern?~ DO ~SetGlobal("#CCorrupt300","GLOBAL",1)TakePartyGold(300)~ GOTO CorruptFail300
+IF ~~ THEN REPLY ~Der Klang von 500 GoldmÃ¼nzen sollte selbst in Euren Ohren wie Musik klingen, was wisst Ihr?~ DO ~TakePartyGold(500)~ GOTO Corrupt
+IF ~~ THEN REPLY ~Verzeiht die StÃ¶rung, ich werde Euch in Ruhe lassen..~ GOTO EndTalk
 END
 
 IF ~~ THEN BEGIN Threat
-SAY ~Schon gut <PRO_GIRLBOY>, kein Grund gleich ungemütlich zu werden! Wir wollen doch hier keinen Ärger anfangen, oder?
-Jetzt steckt die Waffen wieder ein, ich erzähle Euch was ich weiß.~
+SAY ~Schon gut <PRO_GIRLBOY>, kein Grund gleich ungemÃ¼tlich zu werden! Wir wollen doch hier keinen Ã„rger anfangen, oder?
+Jetzt steckt die Waffen wieder ein, ich erzÃ¤hle Euch was ich weiÃŸ.~
 IF ~~ THEN GOTO Explain
 END
 
 IF ~~ THEN BEGIN ThreatFail
-SAY ~(Brol lacht laut) Macht Euch nicht lächerlich, sogar der fette Schankwirt würde Euch im Handumdrehen vor die Tür jagen! Nun steckt die Waffen ein bevor Ihr Euch noch verletzt.~
-IF ~CheckStatGT(LastTalkedToBy,16,39)~ THEN REPLY ~ Ohne Euch zu nahe treten zu wollen, aber durch Euer ablehnendes Verhalten macht Ihr Euch äußerst verdächtig.~ GOTO Convince
-IF ~CheckStatLT(LastTalkedToBy,17,39)~ THEN REPLY ~ Ohne Euch zu nahe treten zu wollen, aber durch Euer ablehnendes Verhalten macht Ihr Euch äußerst verdächtig.~ GOTO ConvinceFail
-IF ~Global("#CCorrupt100","GLOBAL",0)~ THEN REPLY ~Nun, vielleicht kann das Klimpern von 100 Goldmünzen euch ja umstimmen?~ DO ~SetGlobal("#CCorrupt100","GLOBAL",1)TakePartyGold(100)~ GOTO CorruptFail100
-IF ~Global("#CCorrupt300","GLOBAL",0)~ THEN REPLY ~Wie wär’s mit 300 Goldmünzen, würde das Eure Zunge lockern?~ DO ~SetGlobal("#CCorrupt300","GLOBAL",1)TakePartyGold(300)~ GOTO CorruptFail300
-IF ~~ THEN REPLY ~Der Klang von 500 Goldmünzen sollte selbst in Euren Ohren wie Musik klingen, was wisst Ihr?~ DO ~TakePartyGold(500)~ GOTO Corrupt
-IF ~~ THEN REPLY ~Verzeiht die Störung, ich werde Euch in Ruhe lassen..~ GOTO EndTalk
+SAY ~(Brol lacht laut) Macht Euch nicht lÃ¤cherlich, sogar der fette Schankwirt wÃ¼rde Euch im Handumdrehen vor die TÃ¼r jagen! Nun steckt die Waffen ein bevor Ihr Euch noch verletzt.~
+IF ~CheckStatGT(LastTalkedToBy,16,39)~ THEN REPLY ~ Ohne Euch zu nahe treten zu wollen, aber durch Euer ablehnendes Verhalten macht Ihr Euch Ã¤uÃŸerst verdÃ¤chtig.~ GOTO Convince
+IF ~CheckStatLT(LastTalkedToBy,17,39)~ THEN REPLY ~ Ohne Euch zu nahe treten zu wollen, aber durch Euer ablehnendes Verhalten macht Ihr Euch Ã¤uÃŸerst verdÃ¤chtig.~ GOTO ConvinceFail
+IF ~Global("#CCorrupt100","GLOBAL",0)~ THEN REPLY ~Nun, vielleicht kann das Klimpern von 100 GoldmÃ¼nzen euch ja umstimmen?~ DO ~SetGlobal("#CCorrupt100","GLOBAL",1)TakePartyGold(100)~ GOTO CorruptFail100
+IF ~Global("#CCorrupt300","GLOBAL",0)~ THEN REPLY ~Wie wÃ¤râ€™s mit 300 GoldmÃ¼nzen, wÃ¼rde das Eure Zunge lockern?~ DO ~SetGlobal("#CCorrupt300","GLOBAL",1)TakePartyGold(300)~ GOTO CorruptFail300
+IF ~~ THEN REPLY ~Der Klang von 500 GoldmÃ¼nzen sollte selbst in Euren Ohren wie Musik klingen, was wisst Ihr?~ DO ~TakePartyGold(500)~ GOTO Corrupt
+IF ~~ THEN REPLY ~Verzeiht die StÃ¶rung, ich werde Euch in Ruhe lassen..~ GOTO EndTalk
 END
 
 IF ~~ THEN BEGIN Convince
-SAY ~*grml* Ich nehme an, dass Ihr selber an Euer dummes Geschwätz glaubt. Aber ich kann es mir nicht leisten mit der Wache in Konflikt zu geraten.~
+SAY ~*grml* Ich nehme an, dass Ihr selber an Euer dummes GeschwÃ¤tz glaubt. Aber ich kann es mir nicht leisten mit der Wache in Konflikt zu geraten.~
 IF ~~ THEN GOTO Explain
 END
 
 IF ~~ THEN BEGIN ConvinceFail
-SAY ~(Brol lacht laut) Verdächtig, ja? Also ist jeder hier der von Eurem Geschwätz genervt ist "verdächtig"?. Was wollt Ihr tun, die Wache rufen? Zieht Leine!~
+SAY ~(Brol lacht laut) VerdÃ¤chtig, ja? Also ist jeder hier der von Eurem GeschwÃ¤tz genervt ist "verdÃ¤chtig"?. Was wollt Ihr tun, die Wache rufen? Zieht Leine!~
 IF ~CheckStatGT(LastTalkedToBy,16,36)~ THEN REPLY ~ Nun, wir haben nicht gerade viel Zeit und haben ebenso wenig Lust zu plaudern wie Ihr. Aber im Gegensatz zu euch sind wir schwer bewaffnet und kampfbereit.~ GOTO Threat
 IF ~CheckStatLT(LastTalkedToBy,17,36)~ THEN REPLY ~ Nun, wir haben nicht gerade viel Zeit und haben ebenso wenig Lust zu plaudern wie Ihr. Aber im Gegensatz zu euch sind wir schwer bewaffnet und kampfbereit.~ GOTO ThreatFail
-IF ~Global("#CCorrupt100","GLOBAL",0)~ THEN REPLY ~Nun, vielleicht kann das Klimpern von 100 Goldmünzen euch ja umstimmen?~ DO ~SetGlobal("#CCorrupt100","GLOBAL",1)TakePartyGold(100)~ GOTO CorruptFail100
-IF ~Global("#CCorrupt300","GLOBAL",0)~ THEN REPLY ~Wie wär’s mit 300 Goldmünzen, würde das Eure Zunge lockern?~ DO ~SetGlobal("#CCorrupt300","GLOBAL",1)TakePartyGold(300)~ GOTO CorruptFail300
-IF ~~ THEN REPLY ~Der Klang von 500 Goldmünzen sollte selbst in Euren Ohren wie Musik klingen, was wisst Ihr?~ DO ~TakePartyGold(500)~ GOTO Corrupt
-IF ~~ THEN REPLY ~Verzeiht die Störung, ich werde Euch in Ruhe lassen..~ GOTO EndTalk
+IF ~Global("#CCorrupt100","GLOBAL",0)~ THEN REPLY ~Nun, vielleicht kann das Klimpern von 100 GoldmÃ¼nzen euch ja umstimmen?~ DO ~SetGlobal("#CCorrupt100","GLOBAL",1)TakePartyGold(100)~ GOTO CorruptFail100
+IF ~Global("#CCorrupt300","GLOBAL",0)~ THEN REPLY ~Wie wÃ¤râ€™s mit 300 GoldmÃ¼nzen, wÃ¼rde das Eure Zunge lockern?~ DO ~SetGlobal("#CCorrupt300","GLOBAL",1)TakePartyGold(300)~ GOTO CorruptFail300
+IF ~~ THEN REPLY ~Der Klang von 500 GoldmÃ¼nzen sollte selbst in Euren Ohren wie Musik klingen, was wisst Ihr?~ DO ~TakePartyGold(500)~ GOTO Corrupt
+IF ~~ THEN REPLY ~Verzeiht die StÃ¶rung, ich werde Euch in Ruhe lassen..~ GOTO EndTalk
 END
 
 IF ~~ THEN BEGIN CorruptFail100
-SAY ~Es fällt mir weiterhin sehr schwer mich zu erinnern, wenn Ihr versteht was ich meine.
-Vielleicht würde es ja helfen wenn Ihr etwas tiefer in Eure Tasche greifen würdet...~
+SAY ~Es fÃ¤llt mir weiterhin sehr schwer mich zu erinnern, wenn Ihr versteht was ich meine.
+Vielleicht wÃ¼rde es ja helfen wenn Ihr etwas tiefer in Eure Tasche greifen wÃ¼rdet...~
 IF ~CheckStatGT(LastTalkedToBy,16,36)~ THEN REPLY ~ Nun, wir haben nicht gerade viel Zeit und haben ebenso wenig Lust zu plaudern wie Ihr. Aber im Gegensatz zu euch sind wir schwer bewaffnet und kampfbereit.~ GOTO Threat
 IF ~CheckStatLT(LastTalkedToBy,17,36)~ THEN REPLY ~ Nun, wir haben nicht gerade viel Zeit und haben ebenso wenig Lust zu plaudern wie Ihr. Aber im Gegensatz zu euch sind wir schwer bewaffnet und kampfbereit.~ GOTO ThreatFail
-IF ~CheckStatGT(LastTalkedToBy,16,39)~ THEN REPLY ~ Ohne Euch zu nahe treten zu wollen, aber durch Euer ablehnendes Verhalten macht Ihr Euch äußerst verdächtig.~ GOTO Convince
-IF ~CheckStatLT(LastTalkedToBy,17,39)~ THEN REPLY ~ Ohne Euch zu nahe treten zu wollen, aber durch Euer ablehnendes Verhalten macht Ihr Euch äußerst verdächtig.~ GOTO ConvinceFail
-IF ~Global("#CCorrupt300","GLOBAL",0)~ THEN REPLY ~Wie wär’s mit 300 Goldmünzen, würde das Eure Zunge lockern?~ DO ~SetGlobal("#CCorrupt300","GLOBAL",1)TakePartyGold(300)~ GOTO CorruptFail300
-IF ~~ THEN REPLY ~Der Klang von 500 Goldmünzen sollte selbst in Euren Ohren wie Musik klingen, was wisst Ihr?~ DO ~TakePartyGold(500)~ GOTO Corrupt
-IF ~~ THEN REPLY ~Verzeiht die Störung, ich werde Euch in Ruhe lassen..~ GOTO EndTalk
+IF ~CheckStatGT(LastTalkedToBy,16,39)~ THEN REPLY ~ Ohne Euch zu nahe treten zu wollen, aber durch Euer ablehnendes Verhalten macht Ihr Euch Ã¤uÃŸerst verdÃ¤chtig.~ GOTO Convince
+IF ~CheckStatLT(LastTalkedToBy,17,39)~ THEN REPLY ~ Ohne Euch zu nahe treten zu wollen, aber durch Euer ablehnendes Verhalten macht Ihr Euch Ã¤uÃŸerst verdÃ¤chtig.~ GOTO ConvinceFail
+IF ~Global("#CCorrupt300","GLOBAL",0)~ THEN REPLY ~Wie wÃ¤râ€™s mit 300 GoldmÃ¼nzen, wÃ¼rde das Eure Zunge lockern?~ DO ~SetGlobal("#CCorrupt300","GLOBAL",1)TakePartyGold(300)~ GOTO CorruptFail300
+IF ~~ THEN REPLY ~Der Klang von 500 GoldmÃ¼nzen sollte selbst in Euren Ohren wie Musik klingen, was wisst Ihr?~ DO ~TakePartyGold(500)~ GOTO Corrupt
+IF ~~ THEN REPLY ~Verzeiht die StÃ¶rung, ich werde Euch in Ruhe lassen..~ GOTO EndTalk
 END
 
 IF ~~ THEN BEGIN CorruptFail300
-SAY ~Ja, ja, ja! Ich erinnere mich dunkel etwas über ein Elfenmädchen gehört zu haben! Wenn ich mich doch nur entsinnen könnte wo...
-Helft mir doch ein wenig auf die Sprünge...~
+SAY ~Ja, ja, ja! Ich erinnere mich dunkel etwas Ã¼ber ein ElfenmÃ¤dchen gehÃ¶rt zu haben! Wenn ich mich doch nur entsinnen kÃ¶nnte wo...
+Helft mir doch ein wenig auf die SprÃ¼nge...~
 IF ~CheckStatGT(LastTalkedToBy,16,36)~ THEN REPLY ~ Nun, wir haben nicht gerade viel Zeit und haben ebenso wenig Lust zu plaudern wie Ihr. Aber im Gegensatz zu euch sind wir schwer bewaffnet und kampfbereit.~ GOTO Threat
 IF ~CheckStatLT(LastTalkedToBy,17,36)~ THEN REPLY ~ Nun, wir haben nicht gerade viel Zeit und haben ebenso wenig Lust zu plaudern wie Ihr. Aber im Gegensatz zu euch sind wir schwer bewaffnet und kampfbereit.~ GOTO ThreatFail
-IF ~CheckStatGT(LastTalkedToBy,16,39)~ THEN REPLY ~ Ohne Euch zu nahe treten zu wollen, aber durch Euer ablehnendes Verhalten macht Ihr Euch äußerst verdächtig.~ GOTO Convince
-IF ~CheckStatLT(LastTalkedToBy,17,39)~ THEN REPLY ~ Ohne Euch zu nahe treten zu wollen, aber durch Euer ablehnendes Verhalten macht Ihr Euch äußerst verdächtig.~ GOTO ConvinceFail
-IF ~Global("#CCorrupt100","GLOBAL",0)~ THEN REPLY ~Nun, vielleicht kann das Klimpern von 100 Goldmünzen euch ja umstimmen?~ DO ~SetGlobal("#CCorrupt100","GLOBAL",1)TakePartyGold(100)~ GOTO CorruptFail100
-IF ~~ THEN REPLY ~Der Klang von 500 Goldmünzen sollte selbst in Euren Ohren wie Musik klingen, was wisst Ihr?~ DO ~TakePartyGold(500)~ GOTO Corrupt
-IF ~~ THEN REPLY ~Verzeiht die Störung, ich werde Euch in Ruhe lassen..~ GOTO EndTalk
+IF ~CheckStatGT(LastTalkedToBy,16,39)~ THEN REPLY ~ Ohne Euch zu nahe treten zu wollen, aber durch Euer ablehnendes Verhalten macht Ihr Euch Ã¤uÃŸerst verdÃ¤chtig.~ GOTO Convince
+IF ~CheckStatLT(LastTalkedToBy,17,39)~ THEN REPLY ~ Ohne Euch zu nahe treten zu wollen, aber durch Euer ablehnendes Verhalten macht Ihr Euch Ã¤uÃŸerst verdÃ¤chtig.~ GOTO ConvinceFail
+IF ~Global("#CCorrupt100","GLOBAL",0)~ THEN REPLY ~Nun, vielleicht kann das Klimpern von 100 GoldmÃ¼nzen euch ja umstimmen?~ DO ~SetGlobal("#CCorrupt100","GLOBAL",1)TakePartyGold(100)~ GOTO CorruptFail100
+IF ~~ THEN REPLY ~Der Klang von 500 GoldmÃ¼nzen sollte selbst in Euren Ohren wie Musik klingen, was wisst Ihr?~ DO ~TakePartyGold(500)~ GOTO Corrupt
+IF ~~ THEN REPLY ~Verzeiht die StÃ¶rung, ich werde Euch in Ruhe lassen..~ GOTO EndTalk
 END
 
 IF ~~ THEN BEGIN Corrupt
-SAY ~Ahhh, natürlich! Ich erinnere mich wieder!~
+SAY ~Ahhh, natÃ¼rlich! Ich erinnere mich wieder!~
 IF ~~ THEN GOTO Explain
 END
 
 IF ~~ THEN BEGIN Explain
-SAY ~Meine Auftraggeber haben mich nach Beregost geschickt um hier ihre Interessen zu vertreten. In den nächsten Tagen sollte ich mich mit meinem Kontaktmann treffen um alles weitere zu vereinbaren.~
-= ~Nun, Ihr fragt Euch sicher, was das mit dem Mädchen zu tun hat das Ihr sucht. Seht, die Organisation für die ich arbeite versteht sich darauf bestimmte Personen... verschwinden zu lassen. Man sagte mir bereits, dass man nahe Nashkell ein neues Ziel ausfindig gemacht habe und es schleunigst zu unserer... Zweigstelle bringen wolle.~
-= ~Laut meinen Auftraggebern handelte es sich dabei um eine junge Elfengöre. Ich nehme an, dass sie das Mädchen ist von dem Ihr vorhin spracht.
+SAY ~Meine Auftraggeber haben mich nach Beregost geschickt um hier ihre Interessen zu vertreten. In den nÃ¤chsten Tagen sollte ich mich mit meinem Kontaktmann treffen um alles weitere zu vereinbaren.~
+= ~Nun, Ihr fragt Euch sicher, was das mit dem MÃ¤dchen zu tun hat das Ihr sucht. Seht, die Organisation fÃ¼r die ich arbeite versteht sich darauf bestimmte Personen... verschwinden zu lassen. Man sagte mir bereits, dass man nahe Nashkell ein neues Ziel ausfindig gemacht habe und es schleunigst zu unserer... Zweigstelle bringen wolle.~
+= ~Laut meinen Auftraggebern handelte es sich dabei um eine junge ElfengÃ¶re. Ich nehme an, dass sie das MÃ¤dchen ist von dem Ihr vorhin spracht.
 Die gute Nachricht ist, dass ich Euch sagen kann wo sie sich gerade befindet...~
-= ~Wie das nunmal so ist gibt es aber auch immer eine schlechte Nachricht. Unsere Organisation versteht sich auf das Ausschalten von Personen mit magischer Begabung. Wir werden ausgebildet unsere Ziele schnell und präzise zu erledigen.
-Das ist zumindest die normale Vorgehensweise. Ihr ahnt sicherlich schon, worauf ich hinaus will. Es ist äußerst ungewöhnlich, dass wir uns die zusätzliche Arbeit machen Gefangene zu nehmen.~
-= ~In Beregost leitet Travin die Operationen. Er ist ein sadistischer Widerling der sich am Leid der Zielpersonen ergötzt. Ich kann Euch versichern, dass Eure Freundin gerade unvorstellbare Qualen erleidet, wenn der Tod sie nicht bereits erlöst hat.~
-= ~Nehmt meine Befehle, alles was Ihr wissen müsst um Travin zu finden steht dort drin.
+= ~Wie das nunmal so ist gibt es aber auch immer eine schlechte Nachricht. Unsere Organisation versteht sich auf das Ausschalten von Personen mit magischer Begabung. Wir werden ausgebildet unsere Ziele schnell und prÃ¤zise zu erledigen.
+Das ist zumindest die normale Vorgehensweise. Ihr ahnt sicherlich schon, worauf ich hinaus will. Es ist Ã¤uÃŸerst ungewÃ¶hnlich, dass wir uns die zusÃ¤tzliche Arbeit machen Gefangene zu nehmen.~
+= ~In Beregost leitet Travin die Operationen. Er ist ein sadistischer Widerling der sich am Leid der Zielpersonen ergÃ¶tzt. Ich kann Euch versichern, dass Eure Freundin gerade unvorstellbare Qualen erleidet, wenn der Tod sie nicht bereits erlÃ¶st hat.~
+= ~Nehmt meine Befehle, alles was Ihr wissen mÃ¼sst um Travin zu finden steht dort drin.
 
-Ihr versteht sicherlich, wenn ich mich jetzt aus dem Staub mache. Meine Arbeitgeber sehen es alles andere als gern, wenn man über sie plaudert.~
-// Hier das Item "Befehle von Brol" der Gruppe übergeben.
-IF ~~ THEN DO ~GiveItem("#Cscrl1",LastTalkedToBy())SetGlobal("#CQuestPart","GLOBAL",5)EscapeAreaDestroy(10)~ UNSOLVED_JOURNAL %Aliennes Entfühung
+Ihr versteht sicherlich, wenn ich mich jetzt aus dem Staub mache. Meine Arbeitgeber sehen es alles andere als gern, wenn man Ã¼ber sie plaudert.~
+// Hier das Item "Befehle von Brol" der Gruppe Ã¼bergeben.
+IF ~~ THEN DO ~GiveItem("#Cscrl1",LastTalkedToBy())SetGlobal("#CQuestPart","GLOBAL",5)EscapeAreaDestroy(10)~ UNSOLVED_JOURNAL %Aliennes EntfÃ¼hung
 
-Ich habe einen Mann namens Brol getroffen der mir nach etwas Überzeugungsarbeit wichtige Informationen über Aliennes Aufenthaltsort geben konnte. Anscheinend ist eine Gruppierung von Magierkillern hinter ihr her gewesen.
-Diese Leute scheinen normalerweise keine Gefangenen zu nehmen, sondern entledigen sich ihrer Zielpersonen schnell und heimlich. Aliennes Entführung stellt hier also eine Ausnahme dar. Brol erzählte mir, dass ein Mann namens Travin die Operationen in Beregost leitet, ein Sadist der es bevorzugt seine Opfer vorher zu foltern.
+Ich habe einen Mann namens Brol getroffen der mir nach etwas Ãœberzeugungsarbeit wichtige Informationen Ã¼ber Aliennes Aufenthaltsort geben konnte. Anscheinend ist eine Gruppierung von Magierkillern hinter ihr her gewesen.
+Diese Leute scheinen normalerweise keine Gefangenen zu nehmen, sondern entledigen sich ihrer Zielpersonen schnell und heimlich. Aliennes EntfÃ¼hrung stellt hier also eine Ausnahme dar. Brol erzÃ¤hlte mir, dass ein Mann namens Travin die Operationen in Beregost leitet, ein Sadist der es bevorzugt seine Opfer vorher zu foltern.
 Ich sollte mich schleunigst auf die Suche nach Brols Kontaktmann in Beregost machen.% EXIT
 END
 
 IF ~~ THEN BEGIN Fight
-SAY ~(Brol schnaubt verächtlich) Was glaubt Ihr eigentlich wer Ihr seid? Anscheinend muss ich das Gesindel von der Straße wieder einmal in die Schranken weisen.~
-IF ~~ THEN DO ~Enemy()SetGlobal("#CQuestPart","GLOBAL",5)~ UNSOLVED_JOURNAL %Aliennes Entfühung
+SAY ~(Brol schnaubt verÃ¤chtlich) Was glaubt Ihr eigentlich wer Ihr seid? Anscheinend muss ich das Gesindel von der StraÃŸe wieder einmal in die Schranken weisen.~
+IF ~~ THEN DO ~Enemy()SetGlobal("#CQuestPart","GLOBAL",5)~ UNSOLVED_JOURNAL %Aliennes EntfÃ¼hung
 
-Der Schankwirt der Roten Gabe verwies mich auf einen grimmigen Kerl namens Brol, der erst seit kurzem die Schenke besuchte. Mein Gespräch mit ihm verlief jedoch alles andere als hilfreich. Er griff mich an, sodass mir nichts anderes übrig blieb als ihn zu töten.
-Vielleicht finde ich in seinem Gepäck ja einen Hinweis auf Aliennes Aufenthaltsort.% EXIT
+Der Schankwirt der Roten Gabe verwies mich auf einen grimmigen Kerl namens Brol, der erst seit kurzem die Schenke besuchte. Mein GesprÃ¤ch mit ihm verlief jedoch alles andere als hilfreich. Er griff mich an, sodass mir nichts anderes Ã¼brig blieb als ihn zu tÃ¶ten.
+Vielleicht finde ich in seinem GepÃ¤ck ja einen Hinweis auf Aliennes Aufenthaltsort.% EXIT
 END
 
 
