@@ -1,5 +1,5 @@
 EXTEND_TOP BART13 0 #1
-IF ~Global("CO#QuestPart","GLOBAL",3)~ THEN REPLY ~Habt ihr in letzter Zeit neue Gäste? Ich suche eine Gruppe Reisender die ein Elfenmädchen bei sich haben.~ GOTO Answer
+IF ~Global("CPQuestPart","GLOBAL",3)~ THEN REPLY ~Habt ihr in letzter Zeit neue Gäste? Ich suche eine Gruppe Reisender die ein Elfenmädchen bei sich haben.~ GOTO Answer
 END
 
 APPEND BART13

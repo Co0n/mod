@@ -1,7 +1,8 @@
 IF
-GLOBAL("CO#BROLExists","AR6757",0)
+GLOBAL("CPQuestPart","GLOBAL",3)
+GLOBAL("CPBROLExists","AR6757",0)
 THEN
 RESPONSE #100
-SetGlobal("CO#BROLExists","AR6757",1)
-CreateCreature("CO#Brol",[668.304],3)
+SetGlobal("CPBROLExists","AR6757",1)
+CreateCreature("CPBrol",[668.304],3)
 END
