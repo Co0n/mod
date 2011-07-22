@@ -1,5 +1,5 @@
 IF
-GLOBAL("Chapter","GLOBAL",4)
+Dead("Mulahey")
 GLOBAL("CPTALDRExists","AR3700",0)
 THEN
 RESPONSE #100
