@@ -3,6 +3,6 @@ GLOBAL("CPQuestPart","GLOBAL",3)
 GLOBAL("CPMELVINExists","AR6700",0)
 THEN
 RESPONSE #100
-SetGlobal("CPMELVINExists","AR6700",3)
+SetGlobal("CPMELVINExists","AR6700",1)
 CreateCreature("CPMelvin",[1997.2016],3)
 END

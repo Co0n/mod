@@ -16,6 +16,7 @@ COMPILE ~Alienne/d/CPTaldr.d~
 COMPILE ~Alienne/d/CPWirt1.d~ 
 COMPILE ~Alienne/d/CPWirt2.d~
 COMPILE ~Alienne/d/CPWirt3.d~
+COMPILE ~Alienne/d/CPFireb.d~
 
 // Area: Nashkel
 EXTEND_TOP ~AR3700.bcs~ ~Alienne/areas/AR3700.baf~ 

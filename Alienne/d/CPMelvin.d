@@ -50,6 +50,7 @@ IF ~~ THEN BEGIN Fight
 SAY ~Achso ist das? Seht, ich mache mir die Hände nicht mit Affen wie Euch schmutzig. Beregost ist groß, es wird Euch nicht gelingen unseren Unterschlupf zu finden bevor das Mädchen tot ist...~
 = ~ANGRIFF MÄNNER!!~
 // Melvin flieht, seine Wachen greifen an.
+// Wachen fehlen noch
 IF ~~ THEN DO ~EscapeAreaMove("AR6754",255,251,6)SetGlobal("CPSideQuest","GLOBAL",0)~ UNSOLVED_JOURNAL %Aliennes Entfühung
 
 Ich habe Melvin direkt mit meiner Suche nach Alienne konfrontiert. Leider zeigte er sich davon nicht sonderlich beeindruckt und verschwand, jedoch nicht ohne seine Wachen auf uns zu hetzen.
@@ -60,6 +61,7 @@ IF ~~ THEN BEGIN Fight2
 SAY ~Achso ist das? Seht, ich mache mir die Hände nicht mit Affen wie Euch schmutzig. Ich schätze ich verstehe langsam, warum Ihr wirklich hier seid. Beregost ist groß, es wird Euch nicht gelingen unseren Unterschlupf zu finden bevor das Mädchen tot ist...~
 = ~ANGRIFF MÄNNER!!~
 // Melvin flieht, seine Wachen greifen an.
+// Wachen fehlen noch
 IF ~~ THEN DO ~EscapeAreaMove("AR6754",255,251,6)SetGlobal("CPSideQuest","GLOBAL",0)~ UNSOLVED_JOURNAL %Aliennes Entfühung
 
 Melvin verlangte von mir, dass ich einen Magier namens Firebead Elfenhaar ermorde, um meine Fähigkeiten unter Beweis zu stellen. Ich habe mich jedoch dagegen entschieden, woraufhin seine Wachen auf mich hetzte.
@@ -75,5 +77,5 @@ IF ~~ THEN BEGIN EndTalk2
 SAY ~Hmpf... Ich werde hier auf Euch warten. Aber beeilt euch, ich habe keine Lust den ganzen Tag hier zu stehen.~
 IF ~~ THEN DO ~SetGlobal("CPSideQuest","GLOBAL",1)~ UNSOLVED_JOURNAL %Aliennes Entfühung
 
-Ich habe mich mit Brols Kontaktmann getroffen, dieser war jedoch nicht bereit mich ohne eine Prüfung zum Unterschlupf zu führen. Um meinen Nutzen für die Organisation zu beweisen soll ich Firebead Elfenhaar, einen alten Bekannten aus Kerzenburg, töten und dessen Stab als Beweis mitbringen. Er wohnt irgendwo in Beregost.% EXIT
+Ich habe mich mit Brols Kontaktmann getroffen, dieser war jedoch nicht bereit mich ohne eine Prüfung zum Unterschlupf zu führen. Um meinen Nutzen für die Organisation zu beweisen soll ich Firebead Elfenhaar, einen alten Bekannten aus Kerzenburg, töten und dessen Stab als Beweis mitbringen. Er wohnt irgendwo hier in Beregost.% EXIT
 END
