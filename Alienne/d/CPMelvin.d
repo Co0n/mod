@@ -90,7 +90,7 @@ SAY ~Achso ist das? Seht, ich mache mir die Hände nicht mit Affen wie Euch schmu
 = ~ANGRIFF MÄNNER!!~
 // Melvin flieht, seine Wachen greifen an.
 // Wachen fehlen noch
-IF ~~ THEN DO ~EscapeAreaMove("AR6754",255,251,6)SetGlobal("CPSideQuest","GLOBAL",0)~ UNSOLVED_JOURNAL %Aliennes Entfühung
+IF ~~ THEN DO ~Enemy()SetGlobal("CPSideQuest","GLOBAL",0)~ UNSOLVED_JOURNAL %Aliennes Entfühung
 
 Ich habe Melvin direkt mit meiner Suche nach Alienne konfrontiert. Leider zeigte er sich davon nicht sonderlich beeindruckt und verschwand, jedoch nicht ohne seine Wachen auf uns zu hetzen.
 Nun habe ich jegliche Verbindung zu Alienne verloren. Mir bleibt nichts anderes übrig als in Beregost nach dem Versteck zu suchen. Ich sollte mich beeilen um Alienne lebend aus den Händen dieses Travin zu retten.% EXIT
@@ -102,7 +102,7 @@ SAY ~Achso ist das? Seht, ich mache mir die Hände nicht mit Affen wie Euch schmu
 = ~ANGRIFF MÄNNER!!~
 // Melvin flieht, seine Wachen greifen an.
 // Wachen fehlen noch
-IF ~~ THEN DO ~EscapeAreaMove("AR6754",255,251,6)SetGlobal("CPSideQuest","GLOBAL",0)~ UNSOLVED_JOURNAL %Aliennes Entfühung
+IF ~~ THEN DO ~Enemy()SetGlobal("CPSideQuest","GLOBAL",0)~ UNSOLVED_JOURNAL %Aliennes Entfühung
 
 Melvin verlangte von mir, dass ich einen Magier namens Thalantyr ermorde, um meine Fähigkeiten unter Beweis zu stellen. Ich habe mich jedoch dagegen entschieden, woraufhin er seine Wachen auf mich hetzte.
 Nun habe ich jegliche Verbindung zu Alienne verloren. Mir bleibt nichts anderes übrig als in Beregost nach dem Versteck zu suchen. Ich sollte mich beeilen um Alienne lebend aus den Händen dieses Travin zu retten.% EXIT

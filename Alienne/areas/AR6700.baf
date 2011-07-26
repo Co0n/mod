@@ -5,4 +5,6 @@ THEN
 RESPONSE #100
 SetGlobal("CPMELVINExists","AR6700",1)
 CreateCreature("CPMelvin",[1997.2016],3)
+CreateCreature("CPCLRK01",[2007.1988],4)
+CreateCreature("CPFIGH01",[1958.1975],2)
 END

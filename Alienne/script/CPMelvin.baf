@@ -1,0 +1,11 @@
+IF
+	Allegiance(Myself,NEUTRAL)
+	OR(3)
+	Allegiance("CPMELVIN",ENEMY)
+	Allegiance("CPCLRK01",ENEMY)
+	Allegiance("CPFIGH01",ENEMY)
+THEN
+	RESPONSE #100
+		Enemy()
+		Attack(NearestEnemyOf(Myself))
+END
