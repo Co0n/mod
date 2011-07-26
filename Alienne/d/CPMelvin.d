@@ -1,16 +1,54 @@
 BEGIN CPMelvin
 
-IF ~!Global("CPQuestPart","GLOBAL",5)NumTimesTalkedTo(0)~ THEN BEGIN InitialTalk
+IF 
+~!Global("CPQuestPart","GLOBAL",5)
+NumTimesTalkedTo(0)~ 
+THEN BEGIN InitialTalk
 SAY ~Hmpf, geht mir aus der Sonne, <RACE>.~
 IF ~~ THEN EXIT
 END
 
-IF ~Global("CPQuestPart","GLOBAL",5)NumTimesTalkedTo(0)~ THEN BEGIN InitialTalk2
+//Infos von Brol erhalten (durch Kampf oder Überzeugung)
+IF 
+~Global("CPQuestPart","GLOBAL",5)
+NumTimesTalkedTo(0)~
+THEN BEGIN InitialTalk2
 SAY ~Hmpf, was wollt Ihr, <RACE>? ~
 IF ~HasItem("CPscrl1",LastTalkedToBy())Class(LastTalkedToBy,MAGE_ALL)~ THEN REPLY ~(Die Befehle überreichen) Ich heiße <CHARNAME>, ich soll hier für Euch arbeiten.~ GOTO Mage
 IF ~HasItem("CPscrl1",LastTalkedToBy())!Class(LastTalkedToBy,MAGE_ALL)~ THEN REPLY ~(Die Befehle überreichen) Ich heiße <CHARNAME>, ich soll hier für Euch arbeiten.~ GOTO Work
 IF ~~ THEN REPLY ~Seid Ihr Melvin? Ich suche ein Mädchen Namens Alienne und ich glaube, dass Ihr ganz genau wisst wo ich suchen muss!~ GOTO Fight
 IF ~~ THEN REPLY ~Nichts, Auf wiedersehen.~ GOTO EndTalk
+END
+
+IF WEIGHT #2 
+~Global("CPQuestPart","GLOBAL",5)
+NumTimesTalkedToGT(0)~ 
+THEN BEGIN InitialTalk2
+SAY ~Hmpf, was wollt Ihr, <RACE>? ~
+IF ~HasItem("CPscrl1",LastTalkedToBy())Class(LastTalkedToBy,MAGE_ALL)~ THEN REPLY ~(Die Befehle überreichen) Ich heiße <CHARNAME>, ich soll hier für Euch arbeiten.~ GOTO Mage
+IF ~HasItem("CPscrl1",LastTalkedToBy())!Class(LastTalkedToBy,MAGE_ALL)~ THEN REPLY ~(Die Befehle überreichen) Ich heiße <CHARNAME>, ich soll hier für Euch arbeiten.~ GOTO Work
+IF ~~ THEN REPLY ~Seid Ihr Melvin? Ich suche ein Mädchen Namens Alienne und ich glaube, dass Ihr ganz genau wisst wo ich suchen muss!~ GOTO Fight
+IF ~~ THEN REPLY ~Nichts, Auf wiedersehen.~ GOTO EndTalk
+END
+
+// Nebenquest angenommen und erfüllt.
+IF WEIGHT #1 
+~Global("CPQuestPart","GLOBAL",5)
+PartyHasItem("CPstaf1")
+NumTimesTalkedToGT(0)~ THEN BEGIN InitialTalk3
+SAY ~Ah, <CHARNAME>, wie ich sehe habt ihr den Stab! Dann dann mal her damit. Und ich gehe recht in der Annahme, dass Thalantyr nicht mehr unter den Lebenden weilt?~
+IF ~~ THEN REPLY ~Thalantyr wird Euch keine Probleme mehr bereiten.~ DO ~SetGlobal("CPSideQuest","GLOBAL",3)SetGlobal("CPQuestPart","GLOBAL",6)TakePartyItem("CPstaf1")AddexperienceParty(600)~ GOTO EndTalkQuest
+END
+
+// Nebenquest angenommen aber noch nicht erfüllt.
+IF WEIGHT #1 
+~Global("CPQuestPart","GLOBAL",5)
+!PartyHasItem("CPstaf1")
+NumTimesTalkedToGT(0)~ 
+THEN BEGIN InitialTalk4
+SAY ~Worauf wartet Ihr noch, <RACE>? Kümmert Euch um Thalantyr und besorgt mir diesen Stab!~
+IF ~~ THEN REPLY ~Ich habe kein Interesse Euren Handlanger zu spielen, zeigt mir den Weg zum Unterschlupf oder schmeckt Stahl!~ GOTO Fight2
+IF ~~ THEN REPLY ~Bin schon auf dem Weg.~ GOTO EndTalk
 END
 
 IF ~~ THEN BEGIN Mage
@@ -40,12 +78,13 @@ IF ~~ THEN REPLY ~Ich habe kein Interesse Euren Handlanger zu spielen, zeigt mir
 END
 
 IF ~~ THEN BEGIN Accept
-SAY ~Ihr scheint zumindest nicht auf den Kopf gefallen zu sein. Also passt auf, der Auftraggeber möchte einen Magier namens Firebead Elfenhaar tot sehen. Wir sind ihm bereits seit Wochen auf den Fersen, aber der Feigling hat sich lange Zeit in Kerzenburg versteckt. Vor ein paar Tagen kehrte er allerdings in sein Haus hier in Beregost zurück. Und hier kommt Ihr ins Spiel. Ihr werdet in sein Haus eindringen, den alten Kerl um die Ecke bringen und mir seinen Stab beschaffen.~
+SAY ~Ihr scheint zumindest nicht auf den Kopf gefallen zu sein. Also passt auf, der Auftraggeber möchte einen Magier namens Thalantyr tot sehen. Wir sind ihm bereits seit Wochen auf den Fersen, aber der Feigling hat sich lange Zeit in seinem Anwesen versteckt. Und hier kommt Ihr ins Spiel. Ihr werdet in sein Haus eindringen, den alten Kerl um die Ecke bringen und mir seinen Stab beschaffen.~
 = ~Seid jedoch gewarnt, er ist ein hinterhältiger alter Knacker, und verfügt über einige magische Fähigkeiten. Kommt zurück wenn Ihr den Stab habt, er dürfte einige überaus mächtige Verzauberungen beherbergen.~
 IF ~~ THEN REPLY ~Tut mir Leid für Euch, aber ich habe es mir anders überlegt. Nun führt mich zu eurem Unterschlupf, dann verschone ich Euch vielleicht.~ GOTO Fight2
 IF ~~ THEN REPLY ~Ich mache mich dann mal auf den Weg.~ GOTO EndTalk2
 END
 
+// direkte Konfrontation mit der Entführung
 IF ~~ THEN BEGIN Fight
 SAY ~Achso ist das? Seht, ich mache mir die Hände nicht mit Affen wie Euch schmutzig. Beregost ist groß, es wird Euch nicht gelingen unseren Unterschlupf zu finden bevor das Mädchen tot ist...~
 = ~ANGRIFF MÄNNER!!~
@@ -57,6 +96,7 @@ Ich habe Melvin direkt mit meiner Suche nach Alienne konfrontiert. Leider zeigte
 Nun habe ich jegliche Verbindung zu Alienne verloren. Mir bleibt nichts anderes übrig als in Beregost nach dem Versteck zu suchen. Ich sollte mich beeilen um Alienne lebend aus den Händen dieses Travin zu retten.% EXIT
 END
 
+// Bedrohung und Verlangen nach Aufenthaltsort
 IF ~~ THEN BEGIN Fight2
 SAY ~Achso ist das? Seht, ich mache mir die Hände nicht mit Affen wie Euch schmutzig. Ich schätze ich verstehe langsam, warum Ihr wirklich hier seid. Beregost ist groß, es wird Euch nicht gelingen unseren Unterschlupf zu finden bevor das Mädchen tot ist...~
 = ~ANGRIFF MÄNNER!!~
@@ -64,7 +104,7 @@ SAY ~Achso ist das? Seht, ich mache mir die Hände nicht mit Affen wie Euch schmu
 // Wachen fehlen noch
 IF ~~ THEN DO ~EscapeAreaMove("AR6754",255,251,6)SetGlobal("CPSideQuest","GLOBAL",0)~ UNSOLVED_JOURNAL %Aliennes Entfühung
 
-Melvin verlangte von mir, dass ich einen Magier namens Firebead Elfenhaar ermorde, um meine Fähigkeiten unter Beweis zu stellen. Ich habe mich jedoch dagegen entschieden, woraufhin seine Wachen auf mich hetzte.
+Melvin verlangte von mir, dass ich einen Magier namens Thalantyr ermorde, um meine Fähigkeiten unter Beweis zu stellen. Ich habe mich jedoch dagegen entschieden, woraufhin er seine Wachen auf mich hetzte.
 Nun habe ich jegliche Verbindung zu Alienne verloren. Mir bleibt nichts anderes übrig als in Beregost nach dem Versteck zu suchen. Ich sollte mich beeilen um Alienne lebend aus den Händen dieses Travin zu retten.% EXIT
 END
 
@@ -77,5 +117,13 @@ IF ~~ THEN BEGIN EndTalk2
 SAY ~Hmpf... Ich werde hier auf Euch warten. Aber beeilt euch, ich habe keine Lust den ganzen Tag hier zu stehen.~
 IF ~~ THEN DO ~SetGlobal("CPSideQuest","GLOBAL",1)~ UNSOLVED_JOURNAL %Aliennes Entfühung
 
-Ich habe mich mit Brols Kontaktmann getroffen, dieser war jedoch nicht bereit mich ohne eine Prüfung zum Unterschlupf zu führen. Um meinen Nutzen für die Organisation zu beweisen soll ich Firebead Elfenhaar, einen alten Bekannten aus Kerzenburg, töten und dessen Stab als Beweis mitbringen. Er wohnt irgendwo hier in Beregost.% EXIT
+Ich habe mich mit Brols Kontaktmann getroffen, dieser war jedoch nicht bereit mich ohne eine Prüfung zum Unterschlupf zu führen. Um meinen Nutzen für die Organisation zu beweisen soll ich Thalantyr töten und dessen Stab als Beweis mitbringen. Er wohnt westlich von Beregost.% EXIT
+END
+
+//Nebenquest beendet
+IF ~~ THEN BEGIN EndTalkQuest
+SAY ~Wunderbar, Ihr habt meine Erwartungen bei Weitem übertroffen! Um ehrlich zu sein habe ich nicht mit Eurer Rückkehr gerechnet, allerdings scheint ihr tatsächlich ganz brauchbare Fähigkeiten zu besitzen.
+Alles weitere sollten wir mit Travin besprechen, kommt!~
+// Melvin sollte die Gruppe nun in einer Zwischensequenz zum Unterschlupf führen.
+IF ~~ THEN EXIT
 END

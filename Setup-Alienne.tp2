@@ -16,7 +16,7 @@ COMPILE ~Alienne/d/CPTaldr.d~
 COMPILE ~Alienne/d/CPWirt1.d~ 
 COMPILE ~Alienne/d/CPWirt2.d~
 COMPILE ~Alienne/d/CPWirt3.d~
-COMPILE ~Alienne/d/CPFireb.d~
+COMPILE ~Alienne/d/CPThalan.d~
 
 // Area: Nashkel
 EXTEND_TOP ~AR3700.bcs~ ~Alienne/areas/AR3700.baf~ 
@@ -32,6 +32,7 @@ SAY NAME2 ~Brol~
 
 COMPILE ~Alienne/d/CPBrol.d~
 
+// Area: Rote Garbe, Beregost
 EXTEND_TOP ~AR6757.bcs~ ~Alienne/areas/AR6757.baf~ 
 
 // ######################### \\
@@ -60,15 +61,35 @@ Dennoch werdet Ihr Euch dem üblichen Prozedere unterziehen müssen.
 Entäuscht uns nicht Brol.
 Gezeichnet Z~
 
+// ########################### \\
+// Setup Item: Thalantyrs Stab \\
+// ########################### \\
+
+COPY ~Alienne/itm/CPstaf1.itm~ ~override~
+
+SAY NAME1 ~Thalantyrs Stab~
+SAY NAME2 ~Thalantyrs Stab~
+
+SAY DESC ~Dieser Stab gehörte Thalantyr, einem mächtigen Magier.
+Obwohl Ihr den Stab genau unterstucht könnt ihr keine Besonderheit an ihm feststellen.
+Er gleicht einem herkömmlichen Stab in Aussehen und Beschaffenheit.
+Dieser Stab ist offensichtlich aus dem Holz einer Eiche geschnitzt und an den Enden mit Metallriemen verstärkt.
+In der Mitte ist er mit Lederbändern umwickelt um einen besseren Halt zu ermöglichen.
+Er zeigt viele Gebrauchsspuren und scheint sehr alt zu sein. Er diente seinem früheren Besitzer offenbar schon auf mancher Reise und züchtigte bestimmt schon mehr als nur einen unaufmerksamen Lehrling.~
+
+COPY_EXISTING ~THALAN.cre~ ~override/THALAN.cre~
+ADD_CRE_ITEM ~CPstaf1~ #0 #0 #0 ~IDENTIFIED~ ~INV~
+
 // ############ \\
 // Setup Melvin \\
 // ############ \\
 
-//COPY ~Alienne/cre/CPMELVIN.cre~ ~override/CPMELVIN.cre~
+COPY ~Alienne/cre/CPMELVIN.cre~ ~override/CPMELVIN.cre~
 
-//SAY NAME1 ~Melvin~
-//SAY NAME2 ~Melvin~
+SAY NAME1 ~Melvin~
+SAY NAME2 ~Melvin~
 
-//COMPILE ~Alienne/d/CPMelvin.d~
+COMPILE ~Alienne/d/CPMelvin.d~
 
-//EXTEND_TOP ~AR6700.bcs~ ~Alienne/areas/AR6700.baf~
+// Area: Beregost, Zentrum
+EXTEND_TOP ~AR6700.bcs~ ~Alienne/areas/AR6700.baf~
