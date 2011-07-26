@@ -22,18 +22,14 @@ END
 IF ~~ THEN BEGIN Melvin
 SAY ~MELVIN! Dieser Wicht nervt mich bereits seit Wochen! Beinahe täglich schickt er seine Handlanger um mich zu töten. Habt Ihr meine Diener gesehen? Ich habe sie aus den überresten Eurer Vorgänger gebaut.~
 = ~Ich hab keine Zeit für seine Spielchen und ich dulde keine weiteren Unterbrechungen. Und nun verlasst mein Haus, wenn Euch Euer Leben lieb ist.~
-IF ~~ THEN REPLY ~Ich kann nicht ohne diesen Stab gehen, Melvin würde den Betrug wahrscheinlich bemerken. Wir müssen sein Vertrauen gewinnen um die Entführer eines jungen Mädchens zu verfolgen.~ GOTO Alienne
+IF ~~ THEN REPLY ~Melvin und seine Leute halten eine Magierin gefangen, wir brauchen Euren Stab damit er uns zu ihr führt.~ GOTO Alienne
 IF ~~ THEN REPLY ~Wenn das so ist muss ich den Stab wohl Euren toten Händen entwinden.~ GOTO Fight
 END
 
 IF ~~ THEN BEGIN Alienne
-SAY ~Bei allen Göttern, warum sagt Ihr das nicht gleich? Ein junges Mädchen sagt Ihr? Wie könnte ich Euch da auch nur eine Bitte ausschlagen? Ihr... müsst sie mir unbedingt vorstellen wenn Ihr sie gefunden habt. Sie wird mir sicherlich danken wollen.
-Wo habe ich diesen Verjüngungstrank liegen lassen? Hmm...
-(Thalantyrs lüsterner Gesichtsausdruck widert Euch an, aber offenbar habt Ihr einen wunden Punkt getroffen.)~
-= ~Ihr seid noch hier? Achja, der Stab...
-Nehmt ihn, ich brauche ihn ohnehin nicht. Und solltet ihr die Gelegenheit dazu bekommen, sorgt bitte dafür, dass man mich nicht mehr stört. Dieser Melvin ist wirklich eine Plage!~
+SAY ~Bei allen Göttern, warum sagt Ihr das nicht gleich? Das ist ein nobles Ziel das Ihr da habt! Hier, nehmt ihn, ich brauche das alte Ding ohnehin nicht wirklich. Und solltet ihr die Gelegenheit dazu bekommen, sorgt bitte dafür, dass man mich nicht mehr stört. Dieser Melvin ist wirklich eine Plage!~
 IF ~~ THEN REPLY ~Ähm ja, ich gehe dann mal.~ GOTO EndTalk2
-IF ~~ THEN REPLY ~Ich erledige meine Aufgaben lieber gründlich, macht Euch auf den Tod gefasst, Perversling!~ GOTO Fight2
+IF ~~ THEN REPLY ~Ich erledige meine Aufgaben lieber gründlich, macht Euch auf den Tod gefasst!~ GOTO Fight2
 END
 
 IF ~~ THEN BEGIN Fight
