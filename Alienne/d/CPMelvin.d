@@ -1,52 +1,28 @@
 BEGIN CPMelvin
 
-IF 
-~!Global("CPQuestPart","GLOBAL",5)
-NumTimesTalkedTo(0)~ 
+IF ~NumTimesTalkedTo(0)~ 
 THEN BEGIN InitialTalk
 SAY ~Hmpf, geht mir aus der Sonne, <RACE>.~
-IF ~~ THEN EXIT
+IF ~PartyHasItem("CPscrl1")Class(LastTalkedToBy,MAGE_ALL)~ THEN REPLY ~(Die Befehle überreichen) Ich heiße <CHARNAME>, ich soll hier für Euch arbeiten.~ GOTO Mage
+IF ~PartyHasItem("CPscrl1")!Class(LastTalkedToBy,MAGE_ALL)~ THEN REPLY ~(Die Befehle überreichen) Ich heiße <CHARNAME>, ich soll hier für Euch arbeiten.~ GOTO Work
+IF ~PartyHasItem("CPscrl1")~ THEN REPLY ~Seid Ihr Melvin? Ich suche ein Mädchen Namens Alienne und ich glaube, dass Ihr ganz genau wisst wo ich suchen muss!~ GOTO Fight
+IF ~~ THEN REPLY ~Auf wiedersehen.~ GOTO EndTalk
 END
 
-//Infos von Brol erhalten (durch Kampf oder Überzeugung)
-IF 
-~HasItem("CPscrl1",LastTalkedToBy())
-NumTimesTalkedTo(0)~
+IF WEIGHT #2 ~NumTimesTalkedToGT(0)~ 
 THEN BEGIN InitialTalk2
 SAY ~Hmpf, was wollt Ihr, <RACE>?~
-IF ~Class(LastTalkedToBy,MAGE_ALL)~ THEN REPLY ~(Die Befehle überreichen) Ich heiße <CHARNAME>, ich soll hier für Euch arbeiten.~ GOTO Mage
-IF ~!Class(LastTalkedToBy,MAGE_ALL)~ THEN REPLY ~(Die Befehle überreichen) Ich heiße <CHARNAME>, ich soll hier für Euch arbeiten.~ GOTO Work
-IF ~~ THEN REPLY ~Seid Ihr Melvin? Ich suche ein Mädchen Namens Alienne und ich glaube, dass Ihr ganz genau wisst wo ich suchen muss!~ GOTO Fight
+IF ~PartyHasItem("CPscrl1")Class(LastTalkedToBy,MAGE_ALL)~ THEN REPLY ~(Die Befehle überreichen) Ich heiße <CHARNAME>, ich soll hier für Euch arbeiten.~ GOTO Mage
+IF ~PartyHasItem("CPscrl1")!Class(LastTalkedToBy,MAGE_ALL)~ THEN REPLY ~(Die Befehle überreichen) Ich heiße <CHARNAME>, ich soll hier für Euch arbeiten.~ DO ~TakePartyItem("CPscrl1")~ GOTO Work
+IF ~PartyHasItem("CPscrl1")~ THEN REPLY ~Seid Ihr Melvin? Ich suche ein Mädchen Namens Alienne und ich glaube, dass Ihr ganz genau wisst wo ich suchen muss!~ GOTO Fight
 IF ~~ THEN REPLY ~Nichts, Auf wiedersehen.~ GOTO EndTalk
 END
-
-IF WEIGHT #2 
-~HasItem("CPscrl1",LastTalkedToBy())
-NumTimesTalkedToGT(0)~ 
-THEN BEGIN InitialTalk2
-SAY ~Hmpf, was wollt Ihr, <RACE>?~
-IF ~Class(LastTalkedToBy,MAGE_ALL)~ THEN REPLY ~(Die Befehle überreichen) Ich heiße <CHARNAME>, ich soll hier für Euch arbeiten.~ GOTO Mage
-IF ~!Class(LastTalkedToBy,MAGE_ALL)~ THEN REPLY ~(Die Befehle überreichen) Ich heiße <CHARNAME>, ich soll hier für Euch arbeiten.~ GOTO Work
-IF ~~ THEN REPLY ~Seid Ihr Melvin? Ich suche ein Mädchen Namens Alienne und ich glaube, dass Ihr ganz genau wisst wo ich suchen muss!~ GOTO Fight
-IF ~~ THEN REPLY ~Nichts, Auf wiedersehen.~ GOTO EndTalk
-END
-
-// Nebenquest angenommen und erfüllt.
-IF WEIGHT #1 
-~GlobalGT("CPSideQuest","GLOBAL",1)
-PartyHasItem("CPstaf1")
-NumTimesTalkedToGT(0)~ THEN BEGIN InitialTalk3
-SAY ~Ah, <CHARNAME>, wie ich sehe habt ihr den Stab! Dann dann mal her damit. Und ich gehe recht in der Annahme, dass Thalantyr nicht mehr unter den Lebenden weilt?~
-IF ~~ THEN REPLY ~Thalantyr wird Euch keine Probleme mehr bereiten.~ DO ~SetGlobal("CPSideQuest","GLOBAL",3)SetGlobal("CPQuestPart","GLOBAL",6)TakePartyItem("CPstaf1")AddexperienceParty(600)~ GOTO EndTalkQuest
-END
-
-// Nebenquest angenommen aber noch nicht erfüllt.
-IF WEIGHT #1 
-~GlobalGT("CPSideQuest","GLOBAL",1)
-!PartyHasItem("CPstaf1")
-NumTimesTalkedToGT(0)~ 
-THEN BEGIN InitialTalk4
-SAY ~Worauf wartet Ihr noch, <RACE>? Kümmert Euch um Thalantyr und besorgt mir diesen Stab!~
+  
+IF WEIGHT #1
+~Global("CPSideQuest","GLOBAL",1)~ 
+THEN BEGIN Sidequest
+SAY ~Ah, <CHARNAME>, habt Ihr den Auftrag erfüllt?~
+IF ~PartyHasItem("CPstaf1")~ THEN REPLY ~Thalantyr wird Euch keine Probleme mehr bereiten, hier ist sein Stab.~ DO ~SetGlobal("CPSideQuest","GLOBAL",2)SetGlobal("CPQuestPart","GLOBAL",6)TakePartyItem("CPstaf1")AddexperienceParty(600)~ GOTO EndTalkQuest
 IF ~~ THEN REPLY ~Ich habe kein Interesse Euren Handlanger zu spielen, zeigt mir den Weg zum Unterschlupf oder schmeckt Stahl!~ GOTO Fight2
 IF ~~ THEN REPLY ~Bin schon auf dem Weg.~ GOTO EndTalk
 END
@@ -55,7 +31,6 @@ IF ~~ THEN BEGIN Mage
 SAY ~Soso, arbeiten wollt Ihr, ja? Ihr könnt mich nicht täuschen, Magier. Ich denke ich weiß ganz genau warum Ihr wirklich hier seid, und Ihr werdet bald erfahren, dass es mit uns nicht zu Spaßen ist.~
 = ~Travin hat gerade eine gehörige Menge Spaß mit der Göre in einem Haus südlich von hier. Und ich werde nun meinen Spaß mit euch haben.~
 = ~ANGRIFF MÄNNER!!~
-//Melvin greift zusammen mit seinen Wachen an.
 IF ~~ THEN DO ~Enemy()SetGlobal("CPSideQuest","GLOBAL",0)~ UNSOLVED_JOURNAL %Aliennes Entfühung
 
 Melvin erkannte sofort, dass ich ein Magier bin und griff mich mit seinen Wachen an.
@@ -88,8 +63,6 @@ END
 IF ~~ THEN BEGIN Fight
 SAY ~Achso ist das? Seht, ich mache mir die Hände nicht mit Affen wie Euch schmutzig. Beregost ist groß, es wird Euch nicht gelingen unseren Unterschlupf zu finden bevor das Mädchen tot ist...~
 = ~ANGRIFF MÄNNER!!~
-// Melvin flieht, seine Wachen greifen an.
-// Wachen fehlen noch
 IF ~~ THEN DO ~Enemy()SetGlobal("CPSideQuest","GLOBAL",0)~ UNSOLVED_JOURNAL %Aliennes Entfühung
 
 Ich habe Melvin direkt mit meiner Suche nach Alienne konfrontiert. Leider zeigte er sich davon nicht sonderlich beeindruckt und verschwand, jedoch nicht ohne seine Wachen auf uns zu hetzen.
@@ -100,8 +73,6 @@ END
 IF ~~ THEN BEGIN Fight2
 SAY ~Achso ist das? Seht, ich mache mir die Hände nicht mit Affen wie Euch schmutzig. Ich schätze ich verstehe langsam, warum Ihr wirklich hier seid. Beregost ist groß, es wird Euch nicht gelingen unseren Unterschlupf zu finden bevor das Mädchen tot ist...~
 = ~ANGRIFF MÄNNER!!~
-// Melvin flieht, seine Wachen greifen an.
-// Wachen fehlen noch
 IF ~~ THEN DO ~Enemy()SetGlobal("CPSideQuest","GLOBAL",0)~ UNSOLVED_JOURNAL %Aliennes Entfühung
 
 Melvin verlangte von mir, dass ich einen Magier namens Thalantyr ermorde, um meine Fähigkeiten unter Beweis zu stellen. Ich habe mich jedoch dagegen entschieden, woraufhin er seine Wachen auf mich hetzte.

@@ -2,27 +2,17 @@ BEGIN CPBrol
 
 IF ~NumTimesTalkedTo(0)~ THEN BEGIN InitialTalk
 SAY ~Verschwindet, ich habe keine Lust mich mit Gesindel wie Euch abzugeben!~
-IF ~~ THEN EXIT
-END
-
-IF ~!Global("CPQuestPart","GLOBAL",4)NumTimesTalkedToGT(0)~ THEN BEGIN Talk2
-SAY ~Ihr schon wieder? Verschwindet, <RACE>, bevor ihr meine Stiefel zu spüren bekommt!~
-IF ~~ THEN EXIT
-END
-
-IF ~Global("CPQuestPart","GLOBAL",4)NumTimesTalkedTo(0)~ THEN BEGIN InitialTalk2
-SAY ~Verschwindet, ich habe keine Lust mich mit Gesindel wie Euch abzugeben!~
-IF ~Class(LastTalkedToBy,MAGE_ALL)~ THEN REPLY ~Ich bin auf der Suche nach einem vermissten Mädchen, vielleicht könntet ihr mir helfen.~ GOTO Mage
-IF ~!Class(LastTalkedToBy,MAGE_ALL)~ THEN REPLY ~Ich bin auf der Suche nach einem vermissten Mädchen, vielleicht könntet Ihr mir helfen.~ GOTO Girl
-IF ~~ THEN REPLY ~Hütet Eure Zunge, oder ich schneide sie Euch heraus!~ GOTO Fight
+IF ~Global("CPQuestPart","GLOBAL",4)Class(LastTalkedToBy,MAGE_ALL)~ THEN REPLY ~Ich bin auf der Suche nach einem vermissten Mädchen, vielleicht könntet ihr mir helfen.~ GOTO Mage
+IF ~Global("CPQuestPart","GLOBAL",4)!Class(LastTalkedToBy,MAGE_ALL)~ THEN REPLY ~Ich bin auf der Suche nach einem vermissten Mädchen, vielleicht könntet Ihr mir helfen.~ GOTO Girl
+IF ~Global("CPQuestPart","GLOBAL",4)~ THEN REPLY ~Hütet Eure Zunge, oder ich schneide sie Euch heraus!~ GOTO Fight
 IF ~~ THEN REPLY ~Verzeiht die Störung, ich werde Euch in Ruhe lassen.~ GOTO EndTalk
-END 
+END
 
-IF ~Global("CPQuestPart","GLOBAL",4)NumTimesTalkedToGT(0)~ THEN BEGIN Talk3
-SAY ~Ihr schon wieder? Verschwindet, bevor ihr meine Stiefel zu spüren bekommt!~
-IF ~Class(LastTalkedToBy,MAGE_ALL)~ THEN REPLY ~Ich bin auf der Suche nach einem vermissten Mädchen, vielleicht könntet ihr mir helfen.~ GOTO Mage
-IF ~!Class(LastTalkedToBy,MAGE_ALL)~ THEN REPLY ~Ich bin auf der Suche nach einem vermissten Mädchen, vielleicht könntet Ihr mir helfen.~ GOTO Girl
-IF ~~ THEN REPLY ~Hütet Eure Zunge, oder ich schneide sie Euch heraus!~ GOTO Fight
+IF ~NumTimesTalkedToGT(0)~ THEN BEGIN Talk2
+SAY ~Ihr schon wieder? Verschwindet, <RACE>, bevor ihr meine Stiefel zu spüren bekommt!~
+IF ~Global("CPQuestPart","GLOBAL",4)Class(LastTalkedToBy,MAGE_ALL)~ THEN REPLY ~Ich bin auf der Suche nach einem vermissten Mädchen, vielleicht könntet ihr mir helfen.~ GOTO Mage
+IF ~Global("CPQuestPart","GLOBAL",4)!Class(LastTalkedToBy,MAGE_ALL)~ THEN REPLY ~Ich bin auf der Suche nach einem vermissten Mädchen, vielleicht könntet Ihr mir helfen.~ GOTO Girl
+IF ~Global("CPQuestPart","GLOBAL",4)~ THEN REPLY ~Hütet Eure Zunge, oder ich schneide sie Euch heraus!~ GOTO Fight
 IF ~~ THEN REPLY ~Verzeiht die Störung, ich werde Euch in Ruhe lassen.~ GOTO EndTalk
 END
 
@@ -119,7 +109,6 @@ Das ist zumindest die normale Vorgehensweise. Ihr ahnt sicherlich schon, worauf 
 = ~Nehmt meine Befehle, alles was Ihr wissen müsst um Travin zu finden steht dort drin.
 
 Ihr versteht sicherlich, wenn ich mich jetzt aus dem Staub mache. Meine Arbeitgeber sehen es alles andere als gern, wenn man über sie plaudert.~
-// Hier das Item "Befehle von Brol" der Gruppe übergeben.
 IF ~~ THEN DO ~GiveItem("CPscrl1",LastTalkedToBy())SetGlobal("CPQuestPart","GLOBAL",5)EscapeAreaDestroy(10)~ UNSOLVED_JOURNAL %Aliennes Entfühung
 
 Ich habe einen Mann namens Brol getroffen der mir nach etwas Überzeugungsarbeit wichtige Informationen über Aliennes Aufenthaltsort geben konnte. Anscheinend ist eine Gruppierung von Magierkillern hinter ihr her gewesen.
@@ -134,7 +123,6 @@ IF ~~ THEN DO ~Enemy()SetGlobal("CPQuestPart","GLOBAL",5)~ UNSOLVED_JOURNAL %Ali
 Der Schankwirt der Roten Gabe verwies mich auf einen grimmigen Kerl namens Brol, der erst seit kurzem die Schenke besuchte. Mein Gespräch mit ihm verlief jedoch alles andere als hilfreich. Er griff mich an, sodass mir nichts anderes übrig blieb als ihn zu töten.
 Vielleicht finde ich in seinem Gepäck ja einen Hinweis auf Aliennes Aufenthaltsort.% EXIT
 END
-
 
 IF ~~ THEN BEGIN EndTalk
 SAY ~Ja das werdet Ihr, und nun macht dass ihr davon kommt!~

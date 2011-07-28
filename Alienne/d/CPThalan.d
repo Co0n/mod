@@ -34,14 +34,14 @@ END
 
 IF ~~ THEN BEGIN Fight
 SAY ~Nun, ich denke es kann nicht schaden neues Material für meine Experimente zu bekommen. Aber sagt nicht ich hätte Euch nicht gewarnt... nachdem ich Euch wieder zusammengebaut habe.~
-IF ~~ THEN DO ~Enemy()SetGlobal("CPSideQuest","GLOBAL",2)~ UNSOLVED_JOURNAL %Aliennes Entfühung
+IF ~~ THEN DO ~Enemy()~ UNSOLVED_JOURNAL %Aliennes Entfühung
 
 Ich habe Thalantyr in seinem Anwesen besucht und wie von Melvin verlangt habe ich mich um die Beschaffung des Stabs gekümmert. Ich erkenne keinerlei Magie in diesem Stück Holz, aber Auftrag ist Auftrag.% EXIT
 END
 
 IF ~~ THEN BEGIN Fight2
 SAY ~Nun, ich denke es kann nicht schaden neues Material für meine Experimente zu bekommen. Aber sagt nicht ich hätte Euch nicht gewarnt... nachdem ich Euch wieder zusammengebaut habe.~
-IF ~~ THEN DO ~Enemy()SetGlobal("CPSideQuest","GLOBAL",2)~ UNSOLVED_JOURNAL %Aliennes Entfühung
+IF ~~ THEN DO ~Enemy()~ UNSOLVED_JOURNAL %Aliennes Entfühung
 
 Ich habe Thalantyr in seinem Anwesen besucht und wie von Melvin verlangt habe ich mich um die Beschaffung des Stabs gekümmert. Thalantyr behauptete, dass keinerlei Magie in seinem Stab steckt und übergab ihn mir freiwillig.
 Thalantyr musste trotzdem das zeitliche Segnen, ich erfülle meine Aufträge nunmal gerne vollständig.% EXIT
@@ -54,7 +54,7 @@ END
 
 IF ~~ THEN BEGIN EndTalk2
 SAY ~Ich werde mich wieder meinen Forschungen widmen, stört mich nicht weiter.~
-IF ~~ THEN DO ~GiveItem("CPstaf1",LastTalkedToBy())SetGlobal("CPSideQuest","GLOBAL",2)~ UNSOLVED_JOURNAL %Aliennes Entfühung
+IF ~~ THEN DO ~GiveItem("CPstaf1",LastTalkedToBy())~ UNSOLVED_JOURNAL %Aliennes Entfühung
 
 Ich habe Thalantyr in seinem Anwesen besucht und wie von Melvin verlangt habe ich mich um die Beschaffung des Stabs gekümmert. Thalantyr behauptete, dass keinerlei Magie in seinem Stab steckt und übergab ihn mir freiwillig.
 Wenn ich Melvin den Stab übergebe wird er glauben, dass Thalantyr tot ist und mich hoffentlich endlich zu Alienne führen.

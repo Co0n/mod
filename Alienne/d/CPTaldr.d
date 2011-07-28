@@ -7,20 +7,20 @@ SAY ~Ihr dort! Bitte wartet!~
 IF ~~ THEN DO ~SetGlobal("CPQuestPart","GLOBAL",1)~ GOTO Talk2
 END
 
-IF ~Global("CPQuestPart","GLOBAL",1)~ THEN BEGIN Talk2
-SAY ~Bitte bleibt einen Moment stehen <SIRMAAM>, ich benötige Eure Hilfe!~
-IF ~~ THEN REPLY ~Beruhigt Euch, wie kann ich Euch helfen?~ GOTO Help
-IF ~~ THEN REPLY ~Nun gut, aber lasst Euch gesagt sein, dass meine Dienste nicht umsonst sind.~ GOTO Pay
-IF ~~ THEN REPLY ~Es tut mir Leid, aber ich habe keine Zeit um mich Euren Problemem zu widmen.~ GOTO NoTime
-IF ~~ THEN REPLY ~Zur Seite, Dirne! Eure Probleme interessieren mich nicht!~ GOTO Decline
-END
-
 IF ~NumTimesTalkedToGT(0)Global("CPQuestPart","GLOBAL",1)~ THEN BEGIN InitialTalk2
 SAY ~Wollt Ihr mir nun helfen? Ich flehe euch an!~
 IF ~~ THEN REPLY ~Beruhigt Euch, wie kann ich Euch helfen?~ GOTO Help
 IF ~~ THEN REPLY ~Nun gut, aber lasst Euch gesagt sein, dass meine Dienste nicht umsonst sind.~ GOTO Pay
 IF ~~ THEN REPLY ~Es tut mir Leid, aber ich habe immer noch keine Zeit.~ GOTO NoTime
 IF ~~ THEN REPLY ~Ich sagte doch bereits, verschwindet!~ GOTO Decline
+END
+
+IF ~Global("CPQuestPart","GLOBAL",1)~ THEN BEGIN Talk2
+SAY ~Bitte bleibt einen Moment stehen <SIRMAAM>, ich benötige Eure Hilfe!~
+IF ~~ THEN REPLY ~Beruhigt Euch, wie kann ich Euch helfen?~ GOTO Help
+IF ~~ THEN REPLY ~Nun gut, aber lasst Euch gesagt sein, dass meine Dienste nicht umsonst sind.~ GOTO Pay
+IF ~~ THEN REPLY ~Es tut mir Leid, aber ich habe keine Zeit um mich Euren Problemem zu widmen.~ GOTO NoTime
+IF ~~ THEN REPLY ~Zur Seite, Dirne! Eure Probleme interessieren mich nicht!~ GOTO Decline
 END
 
 IF ~~ THEN BEGIN Pay
@@ -98,7 +98,7 @@ END
 
 IF ~~ THEN BEGIN NoTime
 SAY ~Ich flehe Euch an, es ist von größter Wichtigkeit! Wenn Ihr Zeit findet kommt bitte umgehend zu mir!~
-IF ~~ THEN DO ~SetGlobal("CPEntryNoTime","GLOBAL",1)~ UNSOLVED_JOURNAL %Aliennes Entfühung
+IF ~~ THEN DO ~~ UNSOLVED_JOURNAL %Aliennes Entfühung
 
 Nach meiner Rückkehr aus den Minen von Nashkell traf ich eine Elfe names Taldrin, die mich verzweifelt um Hilfe bat.
 Ich konnte mich jedoch nicht darauf einlassen ohne meine aktuellen Ziele aus den Augen zu verlieren.

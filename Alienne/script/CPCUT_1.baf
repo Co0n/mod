@@ -9,6 +9,7 @@ THEN
 		MoveToPoint([1587.2846])
 		MoveViewPoint([842.3362],VERY_FAST)
 		MoveToPoint([842.3362])
+		Wait(3)
 		EndCutSceneMode()
 END
 
