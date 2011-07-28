@@ -57,6 +57,7 @@ SAY NAME2 ~Melvin~
 
 COMPILE ~Alienne/d/CPMelvin.d~
 COMPILE ~Alienne/script/CPMelvin.baf~
+COMPILE ~Alienne/script/CPCUT_1.baf~
 
 // Area: Beregost, Zentrum
 EXTEND_TOP ~AR6700.bcs~ ~Alienne/areas/AR6700.baf~

@@ -10,30 +10,30 @@ END
 
 //Infos von Brol erhalten (durch Kampf oder Überzeugung)
 IF 
-~Global("CPQuestPart","GLOBAL",5)
+~HasItem("CPscrl1",LastTalkedToBy())
 NumTimesTalkedTo(0)~
 THEN BEGIN InitialTalk2
-SAY ~Hmpf, was wollt Ihr, <RACE>? ~
-IF ~HasItem("CPscrl1",LastTalkedToBy())Class(LastTalkedToBy,MAGE_ALL)~ THEN REPLY ~(Die Befehle überreichen) Ich heiße <CHARNAME>, ich soll hier für Euch arbeiten.~ GOTO Mage
-IF ~HasItem("CPscrl1",LastTalkedToBy())!Class(LastTalkedToBy,MAGE_ALL)~ THEN REPLY ~(Die Befehle überreichen) Ich heiße <CHARNAME>, ich soll hier für Euch arbeiten.~ GOTO Work
+SAY ~Hmpf, was wollt Ihr, <RACE>?~
+IF ~Class(LastTalkedToBy,MAGE_ALL)~ THEN REPLY ~(Die Befehle überreichen) Ich heiße <CHARNAME>, ich soll hier für Euch arbeiten.~ GOTO Mage
+IF ~!Class(LastTalkedToBy,MAGE_ALL)~ THEN REPLY ~(Die Befehle überreichen) Ich heiße <CHARNAME>, ich soll hier für Euch arbeiten.~ GOTO Work
 IF ~~ THEN REPLY ~Seid Ihr Melvin? Ich suche ein Mädchen Namens Alienne und ich glaube, dass Ihr ganz genau wisst wo ich suchen muss!~ GOTO Fight
 IF ~~ THEN REPLY ~Nichts, Auf wiedersehen.~ GOTO EndTalk
 END
 
 IF WEIGHT #2 
-~Global("CPQuestPart","GLOBAL",5)
+~HasItem("CPscrl1",LastTalkedToBy())
 NumTimesTalkedToGT(0)~ 
 THEN BEGIN InitialTalk2
-SAY ~Hmpf, was wollt Ihr, <RACE>? ~
-IF ~HasItem("CPscrl1",LastTalkedToBy())Class(LastTalkedToBy,MAGE_ALL)~ THEN REPLY ~(Die Befehle überreichen) Ich heiße <CHARNAME>, ich soll hier für Euch arbeiten.~ GOTO Mage
-IF ~HasItem("CPscrl1",LastTalkedToBy())!Class(LastTalkedToBy,MAGE_ALL)~ THEN REPLY ~(Die Befehle überreichen) Ich heiße <CHARNAME>, ich soll hier für Euch arbeiten.~ GOTO Work
+SAY ~Hmpf, was wollt Ihr, <RACE>?~
+IF ~Class(LastTalkedToBy,MAGE_ALL)~ THEN REPLY ~(Die Befehle überreichen) Ich heiße <CHARNAME>, ich soll hier für Euch arbeiten.~ GOTO Mage
+IF ~!Class(LastTalkedToBy,MAGE_ALL)~ THEN REPLY ~(Die Befehle überreichen) Ich heiße <CHARNAME>, ich soll hier für Euch arbeiten.~ GOTO Work
 IF ~~ THEN REPLY ~Seid Ihr Melvin? Ich suche ein Mädchen Namens Alienne und ich glaube, dass Ihr ganz genau wisst wo ich suchen muss!~ GOTO Fight
 IF ~~ THEN REPLY ~Nichts, Auf wiedersehen.~ GOTO EndTalk
 END
 
 // Nebenquest angenommen und erfüllt.
 IF WEIGHT #1 
-~Global("CPQuestPart","GLOBAL",5)
+~GlobalGT("CPSideQuest","GLOBAL",1)
 PartyHasItem("CPstaf1")
 NumTimesTalkedToGT(0)~ THEN BEGIN InitialTalk3
 SAY ~Ah, <CHARNAME>, wie ich sehe habt ihr den Stab! Dann dann mal her damit. Und ich gehe recht in der Annahme, dass Thalantyr nicht mehr unter den Lebenden weilt?~
@@ -42,7 +42,7 @@ END
 
 // Nebenquest angenommen aber noch nicht erfüllt.
 IF WEIGHT #1 
-~Global("CPQuestPart","GLOBAL",5)
+~GlobalGT("CPSideQuest","GLOBAL",1)
 !PartyHasItem("CPstaf1")
 NumTimesTalkedToGT(0)~ 
 THEN BEGIN InitialTalk4
@@ -125,5 +125,5 @@ IF ~~ THEN BEGIN EndTalkQuest
 SAY ~Wunderbar, Ihr habt meine Erwartungen bei Weitem übertroffen! Um ehrlich zu sein habe ich nicht mit Eurer Rückkehr gerechnet, allerdings scheint ihr tatsächlich ganz brauchbare Fähigkeiten zu besitzen.
 Alles weitere sollten wir mit Travin besprechen, kommt!~
 // Melvin sollte die Gruppe nun in einer Zwischensequenz zum Unterschlupf führen.
-IF ~~ THEN EXIT
+IF ~~ THEN DO ~ClearAllActions()StartCutSceneMode()StartCutScene("CPCUT_1")~ EXIT
 END

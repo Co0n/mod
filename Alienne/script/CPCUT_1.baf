@@ -1,0 +1,80 @@
+IF
+	True()
+THEN
+	RESPONSE #100
+		CutSceneId("CPMelvin")
+		MoveViewPoint([1954.2611],VERY_FAST)
+		MoveToPoint([1954.2611])
+		MoveViewPoint([1587.2846],VERY_FAST)
+		MoveToPoint([1587.2846])
+		MoveViewPoint([842.3362],VERY_FAST)
+		MoveToPoint([842.3362])
+		EndCutSceneMode()
+END
+
+IF
+	True()
+THEN
+	RESPONSE #100
+		CutSceneId(Player1)
+		Wait(1)
+		MoveToPoint([1932.2565])
+		MoveToPoint([1720.2867])
+		MoveToPoint([963.3335])
+END
+
+IF
+	True()
+THEN
+	RESPONSE #100
+		CutSceneId(Player2)
+		Wait(1)
+		MoveToPoint([1932.2565])
+		MoveToPoint([1720.2870])
+		MoveToPoint([963.3338])
+END
+
+IF
+	True()
+THEN
+	RESPONSE #100
+		CutSceneId(Player3)
+		Wait(1)
+		MoveToPoint([1932.2565])
+		MoveToPoint([1720.2873])
+		MoveToPoint([963.3341])
+END
+
+IF
+	True()
+THEN
+	RESPONSE #100
+		CutSceneId(Player4)
+		Wait(1)
+		MoveToPoint([1932.2565])
+		MoveToPoint([1720.2876])
+		MoveToPoint([963.3344])
+END
+
+IF
+	True()
+THEN
+	RESPONSE #100
+		CutSceneId(Player5)
+		Wait(1)
+		MoveToPoint([1932.2565])
+		MoveToPoint([1720.2879])
+		MoveToPoint([963.3347])
+END
+
+IF
+	True()
+THEN
+	RESPONSE #100
+		CutSceneId(Player6)
+		Wait(1)
+		MoveToPoint([1932.2565])
+		MoveToPoint([1720.2882])
+		MoveToPoint([963.3350])
+END
+
