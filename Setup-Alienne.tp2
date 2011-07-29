@@ -2,6 +2,22 @@ BACKUP ~Alienne/backup~
 AUTHOR ~co0n~
 BEGIN ~Alienne for BGT~
 
+// ############# \\
+//  Setup AREAS  \\
+// ############# \\
+
+// Folterkeller
+APPEND ~MastArea.2da~
+~CP0001  value~
+
+COPY ~Alienne/areas/CP0001.are~ ~override~
+COPY ~Alienne/areas/CP0001HT.bmp~ ~override~
+COPY ~Alienne/areas/CP0001LM.bmp~ ~override~
+COPY ~Alienne/areas/CP0001SR.bmp~ ~override~
+COPY ~Alienne/areas/CP0001.tis~ ~override~
+COPY ~Alienne/areas/CP0001.mos~ ~override~
+COPY ~Alienne/areas/CP0001.wed~ ~override~
+
 
 // ################# \\
 //  Setup CREATURES  \\
@@ -22,7 +38,7 @@ COMPILE ~Alienne/d/CPWirt3.d~
 COMPILE ~Alienne/d/CPThalan.d~
 
 // Area: Nashkel
-EXTEND_TOP ~AR3700.bcs~ ~Alienne/areas/AR3700.baf~ 
+EXTEND_TOP ~AR3700.bcs~ ~Alienne/script/AR3700.baf~ 
 
 
 // Setup Brol
@@ -34,7 +50,7 @@ SAY NAME2 ~Brol~
 COMPILE ~Alienne/d/CPBrol.d~
 
 // Area: Rote Garbe, Beregost
-EXTEND_TOP ~AR6757.bcs~ ~Alienne/areas/AR6757.baf~ 
+EXTEND_TOP ~AR6757.bcs~ ~Alienne/script/AR6757.baf~ 
 
 
 // Setup Melvins Leibgarde
@@ -60,7 +76,7 @@ COMPILE ~Alienne/script/CPMelvin.baf~
 COMPILE ~Alienne/script/CPCUT_1.baf~
 
 // Area: Beregost, Zentrum
-EXTEND_TOP ~AR6700.bcs~ ~Alienne/areas/AR6700.baf~
+EXTEND_TOP ~AR6700.bcs~ ~Alienne/script/AR6700.baf~
 
 
 // ############# \\
