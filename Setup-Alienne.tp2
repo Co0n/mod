@@ -10,13 +10,45 @@ BEGIN ~Alienne for BGT~
 APPEND ~MastArea.2da~
 ~CP0001  value~
 
-COPY ~Alienne/areas/CP0001.are~ ~override~
-COPY ~Alienne/areas/CP0001HT.bmp~ ~override~
-COPY ~Alienne/areas/CP0001LM.bmp~ ~override~
-COPY ~Alienne/areas/CP0001SR.bmp~ ~override~
-COPY ~Alienne/areas/CP0001.tis~ ~override~
-COPY ~Alienne/areas/CP0001.mos~ ~override~
-COPY ~Alienne/areas/CP0001.wed~ ~override~
+COPY ~Alienne/areas/CP0001/CP0001.are~ ~override~
+COPY ~Alienne/areas/CP0001/CP0001HT.bmp~ ~override~
+COPY ~Alienne/areas/CP0001/CP0001LM.bmp~ ~override~
+COPY ~Alienne/areas/CP0001/CP0001SR.bmp~ ~override~
+COPY ~Alienne/areas/CP0001/CP0001.tis~ ~override~
+COPY ~Alienne/areas/CP0001/CP0001.mos~ ~override~
+COPY ~Alienne/areas/CP0001/CP0001.wed~ ~override~
+
+// Folterkeller Vorraum
+APPEND ~MastArea.2da~
+~CP0001  value~
+
+COPY ~Alienne/areas/CP0002/CP0002.are~ ~override~
+COPY ~Alienne/areas/CP0002/CP0002HT.bmp~ ~override~
+COPY ~Alienne/areas/CP0002/CP0002LM.bmp~ ~override~
+COPY ~Alienne/areas/CP0002/CP0002SR.bmp~ ~override~
+COPY ~Alienne/areas/CP0002/CP0002.tis~ ~override~
+COPY ~Alienne/areas/CP0002/CP0002.mos~ ~override~
+COPY ~Alienne/areas/CP0002/CP0002.wed~ ~override~
+
+COPY_EXISTING ~AR6700.are~ ~OVERRIDE~
+LPF fj_are_structure
+INT_VAR
+fj_type = 2 //travel
+fj_box_left = 767                     
+fj_box_top = 3204
+fj_box_right = 789
+fj_box_bottom = 3281
+fj_cursor_idx = 30 //door
+fj_vertex_0 = 789 + (3254 << 16)      
+fj_vertex_1 = 789 + (3204 << 16)
+fj_vertex_2 = 767 + (3224 << 16)
+fj_vertex_3 = 767 + (3281 << 16)
+STR_VAR
+fj_structure_type = region
+fj_name = Door6700                    
+fj_destination_area = CP0002          
+fj_destination_name = Exit6700
+END
 
 
 // ################# \\
