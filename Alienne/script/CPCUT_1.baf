@@ -10,7 +10,7 @@ THEN
 		MoveViewPoint([842.3362],VERY_FAST)
 		MoveToPoint([842.3362])
 		Wait(3)
-		EndCutSceneMode()
+		StartDialogNoSet(Player1)
 END
 
 IF

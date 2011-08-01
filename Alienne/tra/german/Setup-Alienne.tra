@@ -1,0 +1,79 @@
+@10000 = ~Aliennes Entfühung
+
+Nach meiner Rückkehr aus den Minen von Nashkell traf ich eine Elfe names Taldrin, die mich verzweifelt um Hilfe bat.
+Ich konnte mich jedoch nicht darauf einlassen ohne meine aktuellen Ziele aus den Augen zu verlieren.
+Wenn ich es mir anders überlege sollte ich sie noch mal in Nashkell aufsuchen.~
+
+@10001 = ~Aliennes Entfühung
+
+Nach meiner Rückkehr aus den Minen von Nashkell traf ich eine Elfe names Taldrin, die mir verzweifelt von der Entführung ihrer Tochter Alienne berichtete.
+Die Beiden wurden auf der Straße Richtung Beregost im Schlaf von Räubern überrascht. Taldrin meinte, dass sie es vielleicht sogar nur auf ihre Tochter abgesehen hatten.
+Bei den Entführern handelt es sich vermutlich um Sklavenhändler oder ähnliches. Ich willigte ein ihr bei der Verfolgung der Entführer zu helfen.
+Taldrim wartet auf mich in einem Wirtshaus in Beregost.~
+
+@10002 = ~Aliennes Entfühung
+
+Taldrin erwartete mich wie vereinbart in Beregost. Sie berichtete mir, dass sie noch keine nennenswerten Informationen bezüglich Aliennes Entführern erhalten konnte.
+Sie riet mir mich auf den Straßen und in den Wirtshäußern nach kürzlich eingetroffenen Reisenden umzuhören.
+Ich sollte schnell mit der Suche beginnen bevor sich die Spur verliert.~
+
+@10003 = ~Aliennes Entfühung
+
+Der Schankwirt der Roten Gabe verwies mich auf einen grimmigen Kerl namens Brol, der erst seit kurzem die Schenke besuchte. Mein Gespräch mit ihm verlief jedoch alles andere als hilfreich. Als er bemerkte, dass ich über magische Fähigkeiten verfüge griff er mich an.
+Er deutete an ein Magierkiller zu sein, ein Krieger der auf das Töten von Magiern spezialisiert ist. Offensichtlich brachte er uns in Verbindung mit dem Entführten Mädchen. Vielleicht finde ich einen entsprechenden Hinweis in seinem Gepäck.~
+
+@10004 = ~Aliennes Entfühung
+
+Ich habe einen Mann namens Brol getroffen der mir nach etwas Überzeugungsarbeit wichtige Informationen über Aliennes Aufenthaltsort geben konnte. Anscheinend ist eine Gruppierung von Magierkillern hinter ihr her gewesen.
+Diese Leute scheinen normalerweise keine Gefangenen zu nehmen, sondern entledigen sich ihrer Zielpersonen schnell und heimlich. Aliennes Entführung stellt hier also eine Ausnahme dar. Brol erzählte mir, dass ein Mann namens Travin die Operationen in Beregost leitet, ein Sadist der es bevorzugt seine Opfer vorher zu foltern.
+Ich sollte mich schleunigst auf die Suche nach Brols Kontaktmann in Beregost machen.~
+
+@10005 = ~Aliennes Entfühung
+
+Der Schankwirt der Roten Gabe verwies mich auf einen grimmigen Kerl namens Brol, der erst seit kurzem die Schenke besuchte. Mein Gespräch mit ihm verlief jedoch alles andere als hilfreich. Er griff mich an, sodass mir nichts anderes übrig blieb als ihn zu töten.
+Vielleicht finde ich in seinem Gepäck ja einen Hinweis auf Aliennes Aufenthaltsort.~
+
+@10006 = ~Aliennes Entfühung
+
+Melvin erkannte sofort, dass ich ein Magier bin und griff mich mit seinen Wachen an.
+Nun habe ich jegliche Verbindung zu Alienne verloren. Mir bleibt nichts anderes übrig als in Beregost nach dem Versteck zu suchen. Ich sollte mich beeilen um Alienne lebend aus den Händen dieses Travin zu retten.~
+
+@10007 = ~Aliennes Entfühung
+
+Ich habe Melvin direkt mit meiner Suche nach Alienne konfrontiert. Leider zeigte er sich davon nicht sonderlich beeindruckt und verschwand, jedoch nicht ohne seine Wachen auf uns zu hetzen.
+Nun habe ich jegliche Verbindung zu Alienne verloren. Mir bleibt nichts anderes übrig als in Beregost nach dem Versteck zu suchen. Ich sollte mich beeilen um Alienne lebend aus den Händen dieses Travin zu retten.~
+
+@10008 = ~Aliennes Entfühung
+
+Melvin verlangte von mir, dass ich einen Magier namens Thalantyr ermorde, um meine Fähigkeiten unter Beweis zu stellen. Ich habe mich jedoch dagegen entschieden, woraufhin er seine Wachen auf mich hetzte.
+Nun habe ich jegliche Verbindung zu Alienne verloren. Mir bleibt nichts anderes übrig als in Beregost nach dem Versteck zu suchen. Ich sollte mich beeilen um Alienne lebend aus den Händen dieses Travin zu retten.~
+
+// BEGIN Melvin SideQuest
+@10009 = ~Aliennes Entfühung
+
+Ich habe mich mit Brols Kontaktmann getroffen, dieser war jedoch nicht bereit mich ohne eine Prüfung zum Unterschlupf zu führen. Um meinen Nutzen für die Organisation zu beweisen soll ich Thalantyr töten und dessen Stab als Beweis mitbringen. Er wohnt westlich von Beregost.~
+
+@10010 = ~Aliennes Entfühung
+
+Ich habe Thalantyr in seinem Anwesen besucht und wie von Melvin verlangt habe ich mich um die Beschaffung des Stabs gekümmert. Ich erkenne keinerlei Magie in diesem Stück Holz, aber Auftrag ist Auftrag.~
+
+@10011 = ~Aliennes Entfühung
+
+Ich habe Thalantyr in seinem Anwesen besucht und wie von Melvin verlangt habe ich mich um die Beschaffung des Stabs gekümmert. Thalantyr behauptete, dass keinerlei Magie in seinem Stab steckt und übergab ihn mir freiwillig.
+Thalantyr musste trotzdem das zeitliche Segnen, ich erfülle meine Aufträge nunmal gerne vollständig.~
+
+@10012 = ~Aliennes Entfühung
+
+Ich habe Thalantyr in seinem Anwesen besucht und wie von Melvin verlangt habe ich mich um die Beschaffung des Stabs gekümmert. Thalantyr behauptete, dass keinerlei Magie in seinem Stab steckt und übergab ihn mir freiwillig.
+Wenn ich Melvin den Stab übergebe wird er glauben, dass Thalantyr tot ist und mich hoffentlich endlich zu Alienne führen.~
+
+@10013 = ~Aliennes Entfühung
+
+Melvin hat sich von mir täuschen lassen und mich wie versprochen zum Versteck der -- NAME DER ORGANISATION -- geführt. Ich sollte mich beeilen und die Entführer konfrontieren, hoffentlich kommen wir nicht zu spät.~
+// END Melvin Sidequest
+
+
+//ungelöste Aufgaben:	AddJournalEntry(@10000,QUEST)
+//erledigte Aufgaben:	AddJournalEntry(@10036,QUEST_DONE)
+//Tagebucheinträge:	AddJournalEntry(%Text%,INFO)
+//					EraseJournalEntry(10032)EraseJournalEntry(10033)EraseJournalEntry(10034)EraseJournalEntry(10035)

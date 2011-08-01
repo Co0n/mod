@@ -2,17 +2,17 @@ BEGIN CPBrol
 
 IF ~NumTimesTalkedTo(0)~ THEN BEGIN InitialTalk
 SAY ~Verschwindet, ich habe keine Lust mich mit Gesindel wie Euch abzugeben!~
-IF ~Global("CPQuestPart","GLOBAL",4)Class(LastTalkedToBy,MAGE_ALL)~ THEN REPLY ~Ich bin auf der Suche nach einem vermissten Mädchen, vielleicht könntet ihr mir helfen.~ GOTO Mage
-IF ~Global("CPQuestPart","GLOBAL",4)!Class(LastTalkedToBy,MAGE_ALL)~ THEN REPLY ~Ich bin auf der Suche nach einem vermissten Mädchen, vielleicht könntet Ihr mir helfen.~ GOTO Girl
-IF ~Global("CPQuestPart","GLOBAL",4)~ THEN REPLY ~Hütet Eure Zunge, oder ich schneide sie Euch heraus!~ GOTO Fight
+IF ~Global("CPBeregostSearch","GLOBAL",2)Class(LastTalkedToBy,MAGE_ALL)~ THEN REPLY ~Ich bin auf der Suche nach einem vermissten Mädchen, vielleicht könntet ihr mir helfen.~ GOTO Mage
+IF ~Global("CPBeregostSearch","GLOBAL",2)!Class(LastTalkedToBy,MAGE_ALL)~ THEN REPLY ~Ich bin auf der Suche nach einem vermissten Mädchen, vielleicht könntet Ihr mir helfen.~ GOTO Girl
+IF ~Global("CPBeregostSearch","GLOBAL",2)~ THEN REPLY ~Hütet Eure Zunge, oder ich schneide sie Euch heraus!~ GOTO Fight
 IF ~~ THEN REPLY ~Verzeiht die Störung, ich werde Euch in Ruhe lassen.~ GOTO EndTalk
 END
 
 IF ~NumTimesTalkedToGT(0)~ THEN BEGIN Talk2
 SAY ~Ihr schon wieder? Verschwindet, <RACE>, bevor ihr meine Stiefel zu spüren bekommt!~
-IF ~Global("CPQuestPart","GLOBAL",4)Class(LastTalkedToBy,MAGE_ALL)~ THEN REPLY ~Ich bin auf der Suche nach einem vermissten Mädchen, vielleicht könntet ihr mir helfen.~ GOTO Mage
-IF ~Global("CPQuestPart","GLOBAL",4)!Class(LastTalkedToBy,MAGE_ALL)~ THEN REPLY ~Ich bin auf der Suche nach einem vermissten Mädchen, vielleicht könntet Ihr mir helfen.~ GOTO Girl
-IF ~Global("CPQuestPart","GLOBAL",4)~ THEN REPLY ~Hütet Eure Zunge, oder ich schneide sie Euch heraus!~ GOTO Fight
+IF ~Global("CPBeregostSearch","GLOBAL",2)Class(LastTalkedToBy,MAGE_ALL)~ THEN REPLY ~Ich bin auf der Suche nach einem vermissten Mädchen, vielleicht könntet ihr mir helfen.~ GOTO Mage
+IF ~Global("CPBeregostSearch","GLOBAL",2)!Class(LastTalkedToBy,MAGE_ALL)~ THEN REPLY ~Ich bin auf der Suche nach einem vermissten Mädchen, vielleicht könntet Ihr mir helfen.~ GOTO Girl
+IF ~Global("CPBeregostSearch","GLOBAL",2)~ THEN REPLY ~Hütet Eure Zunge, oder ich schneide sie Euch heraus!~ GOTO Fight
 IF ~~ THEN REPLY ~Verzeiht die Störung, ich werde Euch in Ruhe lassen.~ GOTO EndTalk
 END
 
@@ -20,10 +20,8 @@ IF ~~ THEN BEGIN Mage
 SAY ~(Brols gesamte Aufmerksamkeit richtet sich plötzlich auf Euch. Sein Blick wandert prüfend über Eure Kleidung.)~
 = ~Soso, ein Magier also? Ihr seid wohl ein Begleiter dieser Rotzgöre. Macht Euch keine Gedanken, Ihr werdet sie niemals finden. Genaugenommen werdet Ihr euch eh nie wieder Gedanken machen können!
 Ihr macht uns keine Probleme, für Begegnungen mit Eurer Sorte wurde ich ausgebildet…~
-IF ~~ THEN DO ~Enemy()SetGlobal("CPQuestPart","GLOBAL",5)~ UNSOLVED_JOURNAL %Aliennes Entfühung
-
-Der Schankwirt der Roten Gabe verwies mich auf einen grimmigen Kerl namens Brol, der erst seit kurzem die Schenke besuchte. Mein Gespräch mit ihm verlief jedoch alles andere als hilfreich. Als er bemerkte, dass ich über magische Fähigkeiten verfüge griff er mich an.
-Er deutete an ein Magierkiller zu sein, ein Krieger der auf das Töten von Magiern spezialisiert ist. Offensichtlich brachte er uns in Verbindung mit dem Entführten Mädchen. Vielleicht finde ich einen entsprechenden Hinweis in seinem Gepäck.% EXIT
+//Variable hier eventuell erst setzen wenn Brol tot ist.
+IF ~~ THEN DO ~Enemy()SetGlobal("CPBrolAttack","GLOBAL",1)AddJournalEntry(@10003,QUEST)~ EXIT
 END
 
 IF ~~ THEN BEGIN Girl
@@ -109,22 +107,19 @@ Das ist zumindest die normale Vorgehensweise. Ihr ahnt sicherlich schon, worauf 
 = ~Nehmt meine Befehle, alles was Ihr wissen müsst um Travin zu finden steht dort drin.
 
 Ihr versteht sicherlich, wenn ich mich jetzt aus dem Staub mache. Meine Arbeitgeber sehen es alles andere als gern, wenn man über sie plaudert.~
-IF ~~ THEN DO ~GiveItem("CPscrl1",LastTalkedToBy())SetGlobal("CPQuestPart","GLOBAL",5)EscapeAreaDestroy(10)~ UNSOLVED_JOURNAL %Aliennes Entfühung
-
-Ich habe einen Mann namens Brol getroffen der mir nach etwas Überzeugungsarbeit wichtige Informationen über Aliennes Aufenthaltsort geben konnte. Anscheinend ist eine Gruppierung von Magierkillern hinter ihr her gewesen.
-Diese Leute scheinen normalerweise keine Gefangenen zu nehmen, sondern entledigen sich ihrer Zielpersonen schnell und heimlich. Aliennes Entführung stellt hier also eine Ausnahme dar. Brol erzählte mir, dass ein Mann namens Travin die Operationen in Beregost leitet, ein Sadist der es bevorzugt seine Opfer vorher zu foltern.
-Ich sollte mich schleunigst auf die Suche nach Brols Kontaktmann in Beregost machen.% EXIT
+IF ~~ THEN DO ~GiveItem("CPscrl1",LastTalkedToBy())SetGlobal("CPBrolConvinced","GLOBAL",5)AddJournalEntry(@10004,QUEST)EscapeAreaDestroy(10)~ EXIT
 END
 
 IF ~~ THEN BEGIN Fight
 SAY ~(Brol schnaubt verächtlich) Was glaubt Ihr eigentlich wer Ihr seid? Anscheinend muss ich das Gesindel von der Straße wieder einmal in die Schranken weisen.~
-IF ~~ THEN DO ~Enemy()SetGlobal("CPQuestPart","GLOBAL",5)~ UNSOLVED_JOURNAL %Aliennes Entfühung
-
-Der Schankwirt der Roten Gabe verwies mich auf einen grimmigen Kerl namens Brol, der erst seit kurzem die Schenke besuchte. Mein Gespräch mit ihm verlief jedoch alles andere als hilfreich. Er griff mich an, sodass mir nichts anderes übrig blieb als ihn zu töten.
-Vielleicht finde ich in seinem Gepäck ja einen Hinweis auf Aliennes Aufenthaltsort.% EXIT
+IF ~~ THEN DO ~Enemy()SetGlobal("CPBrolAttack","GLOBAL",1)AddJournalEntry(@10005,QUEST)~ EXIT
 END
 
 IF ~~ THEN BEGIN EndTalk
 SAY ~Ja das werdet Ihr, und nun macht dass ihr davon kommt!~
 IF ~~ THEN EXIT
 END
+
+
+// Sind die Variablen "CPBrolAttack" und "CPBrolConvinced" überhaupt nötig? Entscheidend ist der Besitz des Dokuments!
+// Ob Brol noch lebt oder ob er überzeugt wurde wird auch nirgendwo abgefragt.

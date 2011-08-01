@@ -1,6 +1,12 @@
 BACKUP ~Alienne/backup~
 AUTHOR ~co0n~
+
+AUTO_TRA ~Alienne/tra/%s~
+
+LANGUAGE ~Deutsch~ ~german~ ~Alienne/tra/german/Setup-Alienne.tra~
+
 BEGIN ~Alienne for BGT~
+
 
 // ############# \\
 //  Setup AREAS  \\

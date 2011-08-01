@@ -19,22 +19,27 @@ IF ~~ THEN REPLY ~Nichts, Auf wiedersehen.~ GOTO EndTalk
 END
   
 IF WEIGHT #1
-~Global("CPSideQuest","GLOBAL",1)~ 
+~Global("CPJoinSideQuest","GLOBAL",1)~ 
 THEN BEGIN Sidequest
 SAY ~Ah, <CHARNAME>, habt Ihr den Auftrag erfüllt?~
-IF ~PartyHasItem("CPstaf1")~ THEN REPLY ~Thalantyr wird Euch keine Probleme mehr bereiten, hier ist sein Stab.~ DO ~SetGlobal("CPSideQuest","GLOBAL",2)SetGlobal("CPQuestPart","GLOBAL",6)TakePartyItem("CPstaf1")AddexperienceParty(600)~ GOTO EndTalkQuest
+IF ~PartyHasItem("CPstaf1")~ THEN REPLY ~Thalantyr wird Euch keine Probleme mehr bereiten, hier ist sein Stab.~ DO ~SetGlobal("CPJoinSideQuest","GLOBAL",2)SetGlobal("CPQuestPart","GLOBAL",6)TakePartyItem("CPstaf1")AddexperienceParty(600)~ GOTO EndTalkQuest
 IF ~~ THEN REPLY ~Ich habe kein Interesse Euren Handlanger zu spielen, zeigt mir den Weg zum Unterschlupf oder schmeckt Stahl!~ GOTO Fight2
 IF ~~ THEN REPLY ~Bin schon auf dem Weg.~ GOTO EndTalk
+END
+
+IF WEIGHT #1
+~Global("CPJoinSideQuest","GLOBAL",2)~ 
+THEN BEGIN Sidequest
+SAY ~Hmpf, da wären wir also. Ich erinnere Euch nochmal daran, dass dieser Ort Geheim ist. Niemand weis, dass wir hier sind, und das soll auch so bleiben, verstanden?~
+= ~Und nun lasst uns endlich hinein gehen, bevor uns noch jemand sieht.~
+IF ~~ THEN DO ~SetGlobal("CPQuestPart","GLOBAL",6)AddJournalEntry(@10013,QUEST)EscapeAreaMove("Cp0001",805,396,3)~ EXIT
 END
 
 IF ~~ THEN BEGIN Mage
 SAY ~Soso, arbeiten wollt Ihr, ja? Ihr könnt mich nicht täuschen, Magier. Ich denke ich weiß ganz genau warum Ihr wirklich hier seid, und Ihr werdet bald erfahren, dass es mit uns nicht zu Spaßen ist.~
 = ~Travin hat gerade eine gehörige Menge Spaß mit der Göre in einem Haus südlich von hier. Und ich werde nun meinen Spaß mit euch haben.~
 = ~ANGRIFF MÄNNER!!~
-IF ~~ THEN DO ~Enemy()SetGlobal("CPSideQuest","GLOBAL",0)~ UNSOLVED_JOURNAL %Aliennes Entfühung
-
-Melvin erkannte sofort, dass ich ein Magier bin und griff mich mit seinen Wachen an.
-Nun habe ich jegliche Verbindung zu Alienne verloren. Mir bleibt nichts anderes übrig als in Beregost nach dem Versteck zu suchen. Ich sollte mich beeilen um Alienne lebend aus den Händen dieses Travin zu retten.% EXIT
+IF ~~ THEN DO ~Enemy()AddJournalEntry(@10006,QUEST)~ EXIT
 END
 
 IF ~~ THEN BEGIN Work
@@ -58,25 +63,19 @@ SAY ~Ihr scheint zumindest nicht auf den Kopf gefallen zu sein. Also passt auf, 
 IF ~~ THEN REPLY ~Tut mir Leid für Euch, aber ich habe es mir anders überlegt. Nun führt mich zu eurem Unterschlupf, dann verschone ich Euch vielleicht.~ GOTO Fight2
 IF ~~ THEN REPLY ~Ich mache mich dann mal auf den Weg.~ GOTO EndTalk2
 END
-
+                                              
 // direkte Konfrontation mit der Entführung
 IF ~~ THEN BEGIN Fight
 SAY ~Achso ist das? Seht, ich mache mir die Hände nicht mit Affen wie Euch schmutzig. Beregost ist groß, es wird Euch nicht gelingen unseren Unterschlupf zu finden bevor das Mädchen tot ist...~
 = ~ANGRIFF MÄNNER!!~
-IF ~~ THEN DO ~Enemy()SetGlobal("CPSideQuest","GLOBAL",0)~ UNSOLVED_JOURNAL %Aliennes Entfühung
-
-Ich habe Melvin direkt mit meiner Suche nach Alienne konfrontiert. Leider zeigte er sich davon nicht sonderlich beeindruckt und verschwand, jedoch nicht ohne seine Wachen auf uns zu hetzen.
-Nun habe ich jegliche Verbindung zu Alienne verloren. Mir bleibt nichts anderes übrig als in Beregost nach dem Versteck zu suchen. Ich sollte mich beeilen um Alienne lebend aus den Händen dieses Travin zu retten.% EXIT
+IF ~~ THEN DO ~Enemy()AddJournalEntry(@10007,QUEST)~ EXIT
 END
 
 // Bedrohung und Verlangen nach Aufenthaltsort
 IF ~~ THEN BEGIN Fight2
 SAY ~Achso ist das? Seht, ich mache mir die Hände nicht mit Affen wie Euch schmutzig. Ich schätze ich verstehe langsam, warum Ihr wirklich hier seid. Beregost ist groß, es wird Euch nicht gelingen unseren Unterschlupf zu finden bevor das Mädchen tot ist...~
 = ~ANGRIFF MÄNNER!!~
-IF ~~ THEN DO ~Enemy()SetGlobal("CPSideQuest","GLOBAL",0)~ UNSOLVED_JOURNAL %Aliennes Entfühung
-
-Melvin verlangte von mir, dass ich einen Magier namens Thalantyr ermorde, um meine Fähigkeiten unter Beweis zu stellen. Ich habe mich jedoch dagegen entschieden, woraufhin er seine Wachen auf mich hetzte.
-Nun habe ich jegliche Verbindung zu Alienne verloren. Mir bleibt nichts anderes übrig als in Beregost nach dem Versteck zu suchen. Ich sollte mich beeilen um Alienne lebend aus den Händen dieses Travin zu retten.% EXIT
+IF ~~ THEN DO ~Enemy()AddJournalEntry(@10008,QUEST)~ EXIT
 END
 
 IF ~~ THEN BEGIN EndTalk
@@ -86,9 +85,7 @@ END
 
 IF ~~ THEN BEGIN EndTalk2
 SAY ~Hmpf... Ich werde hier auf Euch warten. Aber beeilt euch, ich habe keine Lust den ganzen Tag hier zu stehen.~
-IF ~~ THEN DO ~SetGlobal("CPSideQuest","GLOBAL",1)~ UNSOLVED_JOURNAL %Aliennes Entfühung
-
-Ich habe mich mit Brols Kontaktmann getroffen, dieser war jedoch nicht bereit mich ohne eine Prüfung zum Unterschlupf zu führen. Um meinen Nutzen für die Organisation zu beweisen soll ich Thalantyr töten und dessen Stab als Beweis mitbringen. Er wohnt westlich von Beregost.% EXIT
+IF ~~ THEN DO ~SetGlobal("CPJoinSideQuest","GLOBAL",1)AddJournalEntry(@10009,QUEST)~ EXIT
 END
 
 //Nebenquest beendet

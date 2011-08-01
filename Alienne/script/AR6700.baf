@@ -1,5 +1,5 @@
 IF
-GLOBAL("CPQuestPart","GLOBAL",3)
+GLOBAL("CPJoinQuest","GLOBAL",1)
 GLOBAL("CPMELVINExists","AR6700",0)
 THEN
 RESPONSE #100
@@ -7,4 +7,12 @@ SetGlobal("CPMELVINExists","AR6700",1)
 CreateCreature("CPMelvin",[1997.2016],3)
 CreateCreature("CPCLRK01",[2007.1988],4)
 CreateCreature("CPFIGH01",[1958.1975],2)
+END
+
+IF
+Global("CPHQDoor","AR6700",0)
+THEN
+RESPONSE #100
+SetGlobal("CPHQDoor","AR6700",1)
+TriggerActivation("Door6754",FALSE)
 END
