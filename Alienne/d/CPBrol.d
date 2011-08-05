@@ -107,19 +107,15 @@ Das ist zumindest die normale Vorgehensweise. Ihr ahnt sicherlich schon, worauf 
 = ~Nehmt meine Befehle, alles was Ihr wissen müsst um Travin zu finden steht dort drin.
 
 Ihr versteht sicherlich, wenn ich mich jetzt aus dem Staub mache. Meine Arbeitgeber sehen es alles andere als gern, wenn man über sie plaudert.~
-IF ~~ THEN DO ~GiveItem("CPscrl1",LastTalkedToBy())SetGlobal("CPBrolConvinced","GLOBAL",5)AddJournalEntry(@10004,QUEST)EscapeAreaDestroy(10)~ EXIT
+IF ~~ THEN DO ~GiveItem("CPscrl1",LastTalkedToBy())AddJournalEntry(@10004,QUEST)EscapeAreaDestroy(10)~ EXIT
 END
 
 IF ~~ THEN BEGIN Fight
 SAY ~(Brol schnaubt verächtlich) Was glaubt Ihr eigentlich wer Ihr seid? Anscheinend muss ich das Gesindel von der Straße wieder einmal in die Schranken weisen.~
-IF ~~ THEN DO ~Enemy()SetGlobal("CPBrolAttack","GLOBAL",1)AddJournalEntry(@10005,QUEST)~ EXIT
+IF ~~ THEN DO ~Enemy()AddJournalEntry(@10005,QUEST)~ EXIT
 END
 
 IF ~~ THEN BEGIN EndTalk
 SAY ~Ja das werdet Ihr, und nun macht dass ihr davon kommt!~
 IF ~~ THEN EXIT
 END
-
-
-// Sind die Variablen "CPBrolAttack" und "CPBrolConvinced" überhaupt nötig? Entscheidend ist der Besitz des Dokuments!
-// Ob Brol noch lebt oder ob er überzeugt wurde wird auch nirgendwo abgefragt.

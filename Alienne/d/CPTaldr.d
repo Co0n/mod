@@ -156,7 +156,7 @@ SAY ~Wir dürfen ihren Vorsprung nicht noch größer werden lassen! Beeilt Euch!~
 IF ~Global("CPJoinQuest","GLOBAL",1)~ THEN DO ~SetGlobal("CPBeregostSearch","GLOBAL",1)AddJournalEntry(@10002,QUEST)~ EXIT
 END
 
-// Quest Part 3 beginnt ab hier
+// Quest Part 3 beginnt ab hier: Die Suche nach den Entführern in Beregost.
 IF ~Global("CPJoinQuest","GLOBAL",1)Global("CPBeregostSearch","GLOBAL",1)~ THEN BEGIN InitialTalkP3
 SAY ~Ihr seid schon zurück? Was habt ihr herausgefunden?~
 IF ~~ THEN REPLY ~Ich würde Euch gerne noch ein paar Fragen stellen.~ GOTO Questions

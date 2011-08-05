@@ -1,5 +1,5 @@
 IF
-Dead("Mulahey")
+//Dead("Mulahey")
 GLOBAL("CPTALDRExists","AR3700",0)
 THEN
 RESPONSE #100

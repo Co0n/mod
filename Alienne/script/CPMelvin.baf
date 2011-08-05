@@ -9,3 +9,11 @@ THEN
 		Enemy()
 		Attack(NearestEnemyOf(Myself))
 END
+
+IF
+  Die()
+  Global("CPMelvinHQArrival","GLOBAL",0)
+THEN
+  RESPONSE #100
+  SetGlobal("CPMelvinDead","GLOBAL",1)
+END

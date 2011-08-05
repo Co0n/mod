@@ -22,7 +22,7 @@ IF WEIGHT #1
 ~Global("CPJoinSideQuest","GLOBAL",1)~ 
 THEN BEGIN Sidequest
 SAY ~Ah, <CHARNAME>, habt Ihr den Auftrag erfüllt?~
-IF ~PartyHasItem("CPstaf1")~ THEN REPLY ~Thalantyr wird Euch keine Probleme mehr bereiten, hier ist sein Stab.~ DO ~SetGlobal("CPJoinSideQuest","GLOBAL",2)SetGlobal("CPQuestPart","GLOBAL",6)TakePartyItem("CPstaf1")AddexperienceParty(600)~ GOTO EndTalkQuest
+IF ~PartyHasItem("CPstaf1")~ THEN REPLY ~Thalantyr wird Euch keine Probleme mehr bereiten, hier ist sein Stab.~ DO ~SetGlobal("CPJoinSideQuest","GLOBAL",2)TakePartyItem("CPstaf1")AddexperienceParty(600)~ GOTO EndTalkQuest
 IF ~~ THEN REPLY ~Ich habe kein Interesse Euren Handlanger zu spielen, zeigt mir den Weg zum Unterschlupf oder schmeckt Stahl!~ GOTO Fight2
 IF ~~ THEN REPLY ~Bin schon auf dem Weg.~ GOTO EndTalk
 END
@@ -32,7 +32,7 @@ IF WEIGHT #1
 THEN BEGIN Sidequest
 SAY ~Hmpf, da wären wir also. Ich erinnere Euch nochmal daran, dass dieser Ort Geheim ist. Niemand weis, dass wir hier sind, und das soll auch so bleiben, verstanden?~
 = ~Und nun lasst uns endlich hinein gehen, bevor uns noch jemand sieht.~
-IF ~~ THEN DO ~SetGlobal("CPQuestPart","GLOBAL",6)AddJournalEntry(@10013,QUEST)EscapeAreaMove("Cp0001",805,396,3)~ EXIT
+IF ~~ THEN DO ~SetGlobal("CPMelvinHQArrival","GLOBAL",1)AddJournalEntry(@10013,QUEST)EscapeAreaMove("Cp0001",805,396,3)~ EXIT
 END
 
 IF ~~ THEN BEGIN Mage

@@ -20,18 +20,20 @@ Ich sollte schnell mit der Suche beginnen bevor sich die Spur verliert.~
 @10003 = ~Aliennes Entfühung
 
 Der Schankwirt der Roten Gabe verwies mich auf einen grimmigen Kerl namens Brol, der erst seit kurzem die Schenke besuchte. Mein Gespräch mit ihm verlief jedoch alles andere als hilfreich. Als er bemerkte, dass ich über magische Fähigkeiten verfüge griff er mich an.
-Er deutete an ein Magierkiller zu sein, ein Krieger der auf das Töten von Magiern spezialisiert ist. Offensichtlich brachte er uns in Verbindung mit dem Entführten Mädchen. Vielleicht finde ich einen entsprechenden Hinweis in seinem Gepäck.~
+Er deutete an ein Magierkiller zu sein, ein Krieger der auf das Töten von Magiern spezialisiert ist. Offensichtlich brachte er uns in Verbindung mit dem Entführten Mädchen. Ich habe in seinem Gepäck jedoch einen Interessanten Hinweis gefunden. Anscheinend gehörte er zu einer Gruppe namens -- NAME DER ORGANISATION -- welche es auf Alienne abgesehen hat. Ich weiß nicht, was sie von ihr wollen, aber ich sollte es schnell herausfinden.
+Brol sollte einen Halbling namens Melvin in Beregost treffen, vielleicht kann ich ihn mit diesem Schreiben täuschen um Aliennes Aufenthaltsort zu erfahren.~
 
 @10004 = ~Aliennes Entfühung
 
 Ich habe einen Mann namens Brol getroffen der mir nach etwas Überzeugungsarbeit wichtige Informationen über Aliennes Aufenthaltsort geben konnte. Anscheinend ist eine Gruppierung von Magierkillern hinter ihr her gewesen.
-Diese Leute scheinen normalerweise keine Gefangenen zu nehmen, sondern entledigen sich ihrer Zielpersonen schnell und heimlich. Aliennes Entführung stellt hier also eine Ausnahme dar. Brol erzählte mir, dass ein Mann namens Travin die Operationen in Beregost leitet, ein Sadist der es bevorzugt seine Opfer vorher zu foltern.
+Diese Leute scheinen normalerweise keine Gefangenen zu nehmen, sondern entledigen sich ihrer Zielpersonen schnell und heimlich. Aliennes Entführung stellt hier also eine Ausnahme dar. Brol erzählte mir, dass ein Mann namens Travin die Operationen in Beregost leitet, ein Sadist der es bevorzugt seine Opfer zu Tode zu foltern.
 Ich sollte mich schleunigst auf die Suche nach Brols Kontaktmann in Beregost machen.~
 
 @10005 = ~Aliennes Entfühung
 
 Der Schankwirt der Roten Gabe verwies mich auf einen grimmigen Kerl namens Brol, der erst seit kurzem die Schenke besuchte. Mein Gespräch mit ihm verlief jedoch alles andere als hilfreich. Er griff mich an, sodass mir nichts anderes übrig blieb als ihn zu töten.
-Vielleicht finde ich in seinem Gepäck ja einen Hinweis auf Aliennes Aufenthaltsort.~
+Ich habe in seinem Gepäck jedoch einen Interessanten Hinweis gefunden. Anscheinend gehörte er zu einer Gruppe namens -- NAME DER ORGANISATION -- welche es auf Alienne abgesehen hat. Ich weiß nicht, was sie von ihr wollen, aber ich sollte es schnell herausfinden.
+Brol sollte einen Halbling namens Melvin in Beregost treffen, vielleicht kann ich ihn mit diesem Schreiben täuschen um Aliennes Aufenthaltsort zu erfahren.~
 
 @10006 = ~Aliennes Entfühung
 
@@ -72,8 +74,14 @@ Wenn ich Melvin den Stab übergebe wird er glauben, dass Thalantyr tot ist und mi
 Melvin hat sich von mir täuschen lassen und mich wie versprochen zum Versteck der -- NAME DER ORGANISATION -- geführt. Ich sollte mich beeilen und die Entführer konfrontieren, hoffentlich kommen wir nicht zu spät.~
 // END Melvin Sidequest
 
+@10014 = ~Aliennes Entfühung
+
+Ich habe Firebead Elfenhaar in Beregost von Aliennes Entführung berichtet. Er war bereit mich mit seiner Magie zu unterstützen und versuchte Alienne aufzuspüren. Leider konnte er ihren Aufenthalsort nicht genau bestimmen, aber er konnte die Suche ein wenig eingrenzen. Das Versteck muss irgendwo hier in der Nähe sein, ich sollte die Südlich liegenden Häuser absuchen.~
+
 
 //ungelöste Aufgaben:	AddJournalEntry(@10000,QUEST)
 //erledigte Aufgaben:	AddJournalEntry(@10036,QUEST_DONE)
 //Tagebucheinträge:	AddJournalEntry(%Text%,INFO)
 //					EraseJournalEntry(10032)EraseJournalEntry(10033)EraseJournalEntry(10034)EraseJournalEntry(10035)
+
+// -- NAME DER ORGANISATION --
