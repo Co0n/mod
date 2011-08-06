@@ -130,11 +130,11 @@ SAY NAME2 ~Brols Befehle~
 SAY DESC ~EINSATZBEFEHL
 
 Brol, Ihr werdet hiermit nach Beregost beordert um Travin vor Ort zu unterstützen.
-Ich möchte, dass Ihr mir regelmäßig Bericht über die Angelegenheiten vor Ort erstattet. 
+Ich möchte, dass Ihr mir regelmäßig Bericht über die Angelegenheiten -- NAME DER ORGANISATION -- vor Ort erstattet. 
 Mir sind Gerüchte zu Ohren gekommen, dass man sich dort nicht an die vereinbarte Vorgehensweise hält.
 
 Brol, Travin hat ein neues Ziel nahe Nashkell ausgemacht und plant in kürze zuzugreifen.
-Es handelt sich um eine junge Elfenmagierin die mit einer Begleiterin von Nashkell Richtung Norden reist.
+Es handelt sich um eine junge Elfenmagierin, die mit einer Begleiterin von Nashkell Richtung Norden reist.
 Sollte sich Travin nicht an unsere Abmachung halten, so liegt es an Euch den Auftrag umgehend zu erfüllen und das Mädchen zu töten.
 
 Eure Befehle werdet ihr zukünftig direkt von Eurem dortigen Kontaktmann erhalten.
@@ -161,3 +161,14 @@ Er zeigt viele Gebrauchsspuren und scheint sehr alt zu sein. Er diente seinem fr
 
 COPY_EXISTING ~THALAN.cre~ ~override/THALAN.cre~
 ADD_CRE_ITEM ~CPstaf1~ #0 #0 #0 ~IDENTIFIED~ ~INV~
+
+// Setup Item: Melvins Schlüssel
+COPY ~Alienne/itm/CPMelKey.itm~ ~override~
+
+SAY NAME1 ~Melvins Schlüssel~
+SAY NAME2 ~Melvins Schlüssel~
+
+SAY DESC ~Das ist ein Metallschlüssel von einzigartig hochwertiger Fertigung. Seiner Form nach zu urteilen kann man das Schloss, zu dem er gehört, unmöglich knacken.~
+
+COPY_EXISTING ~CPMelvin.cre~ ~override/CPMelvin.cre~
+ADD_CRE_ITEM ~CpMelKey~ #0 #0 #0 ~IDENTIFIED~ ~INV~
