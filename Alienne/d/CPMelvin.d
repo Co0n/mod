@@ -32,7 +32,7 @@ IF WEIGHT #1
 THEN BEGIN Sidequest
 SAY ~Hmpf, da wären wir also. Ich erinnere Euch nochmal daran, dass dieser Ort Geheim ist. Niemand weis, dass wir hier sind, und das soll auch so bleiben, verstanden?~
 = ~Und nun lasst uns endlich hinein gehen, bevor uns noch jemand sieht.~
-IF ~~ THEN DO ~SetGlobal("CPMelvinHQArrival","GLOBAL",1)AddJournalEntry(@10013,QUEST)EscapeAreaMove("Cp0001",805,396,3)~ EXIT
+IF ~~ THEN DO ~SetGlobal("CPMelvinHQArrival","GLOBAL",1)AddJournalEntry(@10013,QUEST)EscapeAreaMove("Cp0001",738,363,3)~ EXIT
 END
 
 IF ~~ THEN BEGIN Mage

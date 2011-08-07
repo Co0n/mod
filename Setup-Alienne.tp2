@@ -117,6 +117,18 @@ COMPILE ~Alienne/script/CPCUT_1.baf~
 EXTEND_TOP ~AR6700.bcs~ ~Alienne/script/AR6700.baf~
 
 
+// Setup Travin
+COPY ~Alienne/cre/CPTRAVIN.cre~ ~override/CPTRAVIN.cre~
+
+SAY NAME1 ~Travin~
+SAY NAME2 ~Travin~
+
+COMPILE ~Alienne/d/CPTravin.d~
+
+// Area: Rote Garbe, Beregost
+EXTEND_TOP ~CP0001.bcs~ ~Alienne/script/CP0001.baf~
+
+
 // ############# \\
 //  Setup ITEMS  \\
 // ############# \\
@@ -171,4 +183,4 @@ SAY NAME2 ~Melvins Schlüssel~
 SAY DESC ~Das ist ein Metallschlüssel von einzigartig hochwertiger Fertigung. Seiner Form nach zu urteilen kann man das Schloss, zu dem er gehört, unmöglich knacken.~
 
 COPY_EXISTING ~CPMelvin.cre~ ~override/CPMelvin.cre~
-ADD_CRE_ITEM ~CpMelKey~ #0 #0 #0 ~IDENTIFIED~ ~INV~
+ADD_CRE_ITEM ~CPMelKey~ #0 #0 #0 ~IDENTIFIED~ ~INV~
