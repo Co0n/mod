@@ -17,6 +17,13 @@ IF ~PartyHasItem("CPscrl1")!Class(LastTalkedToBy,MAGE_ALL)~ THEN REPLY ~(Die Bef
 IF ~PartyHasItem("CPscrl1")~ THEN REPLY ~Seid Ihr Melvin? Ich suche ein Mädchen Namens Alienne und ich glaube, dass Ihr ganz genau wisst wo ich suchen muss!~ GOTO Fight
 IF ~~ THEN REPLY ~Nichts, Auf wiedersehen.~ GOTO EndTalk
 END
+ 
+IF WEIGHT #1
+~Global("CPMelvinHQArrival","GLOBAL",1)~ 
+THEN BEGIN HQArrival
+SAY ~Ah, Grützi!~
+IF ~~ THEN EXTERN ~CPKalen~ 0
+END 
   
 IF WEIGHT #1
 ~Global("CPJoinSideQuest","GLOBAL",1)~ 
@@ -32,7 +39,7 @@ IF WEIGHT #1
 THEN BEGIN Sidequest
 SAY ~Hmpf, da wären wir also. Ich erinnere Euch nochmal daran, dass dieser Ort Geheim ist. Niemand weis, dass wir hier sind, und das soll auch so bleiben, verstanden?~
 = ~Und nun lasst uns endlich hinein gehen, bevor uns noch jemand sieht.~
-IF ~~ THEN DO ~SetGlobal("CPMelvinHQArrival","GLOBAL",1)AddJournalEntry(@10013,QUEST)EscapeAreaMove("Cp0001",738,363,3)~ EXIT
+IF ~~ THEN DO ~SetGlobal("CPMelvinHQArrival","GLOBAL",1)AddJournalEntry(@10013,QUEST)EscapeAreaMove("CP0001",738,363,4)~ EXIT
 END
 
 IF ~~ THEN BEGIN Mage
@@ -95,3 +102,15 @@ Alles weitere sollten wir mit Travin besprechen, kommt!~
 // Melvin sollte die Gruppe nun in einer Zwischensequenz zum Unterschlupf führen.
 IF ~~ THEN DO ~ClearAllActions()StartCutSceneMode()StartCutScene("CPCUT_1")~ EXIT
 END
+
+
+
+//Weiter (Kalen hat die Gruppe bemerkt)
+
+//Kalen: „Was bei den Höllen ...Fremde in unserem Versteck! Zu den Waffen!
+
+//Melvin: „Was? Diese Leute hatten Brols Befehle bei sich!
+
+//Kalen: „Sie haben Euch hinters Licht geführt, kleiner Tor! Los, kümmert Euch um sie! Ich werde dafür sorgen, dass alle übrigen Spuren verwischt werden.“
+
+//Dialog ende (Kalen und zwei der Wachen verlassen das Haus, während Melvin und die verbliebenen Wachen die Gruppe angreifen) 

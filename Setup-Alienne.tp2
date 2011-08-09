@@ -26,7 +26,7 @@ COPY ~Alienne/areas/CP0001/CP0001.wed~ ~override~
 
 // Folterkeller Vorraum
 APPEND ~MastArea.2da~
-~CP0001  value~
+~CP0002  value~
 
 COPY ~Alienne/areas/CP0002/CP0002.are~ ~override~
 COPY ~Alienne/areas/CP0002/CP0002HT.bmp~ ~override~
@@ -102,6 +102,7 @@ COPY ~Alienne/cre/CPFIGH01.cre~ ~override/CPFIGH01.cre~
 SAY NAME1 ~Wache der XYZ~
 SAY NAME2 ~Wache der XYZ~
 
+COMPILE ~Alienne/script/CPMelAtt.baf~
 
 // Setup Melvin
 COPY ~Alienne/cre/CPMELVIN.cre~ ~override/CPMELVIN.cre~
@@ -125,9 +126,20 @@ SAY NAME2 ~Travin~
 
 COMPILE ~Alienne/d/CPTravin.d~
 
-// Area: Rote Garbe, Beregost
+// Area: Folterkeller in Beregost
 EXTEND_TOP ~CP0001.bcs~ ~Alienne/script/CP0001.baf~
 
+
+// Setup Kalen
+COPY ~Alienne/cre/CPKALEN.cre~ ~override/CPKALEN.cre~
+
+SAY NAME1 ~Kalen~
+SAY NAME2 ~Kalen~
+
+COMPILE ~Alienne/d/CPKalen.d~
+
+// Area: Folterkeller in Beregost
+EXTEND_TOP ~CP0001.bcs~ ~Alienne/script/CP0001.baf~
 
 // ############# \\
 //  Setup ITEMS  \\

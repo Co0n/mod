@@ -3,12 +3,18 @@ IF
 THEN
 	RESPONSE #100
 		CutSceneId("CPMelvin")
-		MoveViewPoint([1954.2611],VERY_FAST)
-		MoveToPoint([1954.2611])
-		MoveViewPoint([1587.2846],VERY_FAST)
-		MoveToPoint([1587.2846])
-		MoveViewPoint([842.3362],VERY_FAST)
-		MoveToPoint([842.3362])
+		MoveViewPoint([1939.2614],VERY_FAST)
+		MoveToPoint([1883.2390])
+		MoveViewPoint([1707.3112],VERY_FAST)  // zum Punkt nach dem Wait
+		MoveToPoint([1939.2614])
+		MoveViewPoint([1317.3273],VERY_FAST)  // zum Punkt nach dem Wait
+		MoveToPoint([1707.2803])
+		Wait(1)
+		MoveToPoint([1650.3050])
+		MoveToPoint([1317.3273])
+    	
+		MoveViewPoint([842.3300],VERY_FAST)		
+		MoveToPoint([789.3303])
 		Wait(3)
 		StartDialogNoSet(Player1)
 END
@@ -19,9 +25,12 @@ THEN
 	RESPONSE #100
 		CutSceneId(Player1)
 		Wait(1)
-		MoveToPoint([1932.2565])
-		MoveToPoint([1720.2867])
-		MoveToPoint([963.3335])
+		MoveToPoint([1907.2329])
+		MoveToPoint([1942.2492])
+    MoveToPoint([1780.2710])
+    MoveToPoint([1707.3112])
+    MoveToPoint([1380.3270])
+    MoveToPoint([990.3317])
 END
 
 IF
@@ -30,9 +39,11 @@ THEN
 	RESPONSE #100
 		CutSceneId(Player2)
 		Wait(1)
-		MoveToPoint([1932.2565])
-		MoveToPoint([1720.2870])
-		MoveToPoint([963.3338])
+		MoveToPoint([1907.2332])
+		MoveToPoint([1942.2495])
+    MoveToPoint([1783.2713])
+    MoveToPoint([1710.3115])
+    MoveToPoint([990.3291])
 END
 
 IF
@@ -41,9 +52,11 @@ THEN
 	RESPONSE #100
 		CutSceneId(Player3)
 		Wait(1)
-		MoveToPoint([1932.2565])
-		MoveToPoint([1720.2873])
-		MoveToPoint([963.3341])
+		MoveToPoint([1907.2335])
+		MoveToPoint([1942.2498])
+    MoveToPoint([1786.2716])
+    MoveToPoint([1713.3118])
+    MoveToPoint([1040.3349])  
 END
 
 IF
@@ -52,9 +65,11 @@ THEN
 	RESPONSE #100
 		CutSceneId(Player4)
 		Wait(1)
-		MoveToPoint([1932.2565])
-		MoveToPoint([1720.2876])
-		MoveToPoint([963.3344])
+		MoveToPoint([1907.2338])
+		MoveToPoint([1942.2501])
+    MoveToPoint([1789.2719])
+    MoveToPoint([1716.3121])
+    MoveToPoint([1040.3290])  
 END
 
 IF
@@ -63,9 +78,11 @@ THEN
 	RESPONSE #100
 		CutSceneId(Player5)
 		Wait(1)
-		MoveToPoint([1932.2565])
-		MoveToPoint([1720.2879])
-		MoveToPoint([963.3347])
+		MoveToPoint([1907.2341])
+		MoveToPoint([1942.2504])
+    MoveToPoint([1792.2722])
+    MoveToPoint([1719.3124])
+    MoveToPoint([1090.3349])  
 END
 
 IF
@@ -74,8 +91,10 @@ THEN
 	RESPONSE #100
 		CutSceneId(Player6)
 		Wait(1)
-		MoveToPoint([1932.2565])
-		MoveToPoint([1720.2882])
-		MoveToPoint([963.3350])
+		MoveToPoint([1907.2344])
+		MoveToPoint([1942.2507])
+    MoveToPoint([1795.2725])
+    MoveToPoint([1722.3127])
+    MoveToPoint([1090.3290])  
 END
 

@@ -2,6 +2,7 @@ IF
 GLOBAL("CPTRAVINExists","CP0001",0)
 THEN
 RESPONSE #100
-GLOBAL("CPTRAVINExists","CP0001",1)
-CreateCreature("CPTravin",[836.592],3)
+SetGlobal("CPTRAVINExists","CP0001",1)
+CreateCreature("CPTravin",[836.592],5)
+CreateCreature("CPKalen",[765.546],12)
 END

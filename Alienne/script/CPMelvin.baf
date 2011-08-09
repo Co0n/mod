@@ -11,6 +11,15 @@ THEN
 END
 
 IF
+  Global("CPMelvinHQArrival","GLOBAL",1)
+  Global("CPMelvinHQArrivalD","GLOBAL",0)
+THEN
+  RESPONSE #100
+  SetGlobal("CPMelvinHQArrivalD","GLOBAL",1)
+  StartDialogNoSet([PC])
+END
+
+IF
   Die()
   Global("CPMelvinHQArrival","GLOBAL",0)
 THEN
