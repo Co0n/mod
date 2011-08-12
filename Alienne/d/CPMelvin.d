@@ -21,8 +21,8 @@ END
 IF WEIGHT #1
 ~Global("CPMelvinHQArrival","GLOBAL",1)~ 
 THEN BEGIN HQArrival
-SAY ~Ah, Grützi!~
-IF ~~ THEN EXTERN ~CPKalen~ 0
+SAY ~Ah, da seid Ihr ja endlich. Wartet einen Augenblick, ich werde Euch gleich vorstellen.~
+IF ~~ THEN EXTERN CPKalen 0
 END 
   
 IF WEIGHT #1

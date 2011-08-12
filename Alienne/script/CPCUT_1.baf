@@ -1,32 +1,51 @@
 IF
-	True()
+  True()
 THEN
-	RESPONSE #100
-		CutSceneId("CPMelvin")
-		MoveViewPoint([1939.2614],VERY_FAST)
-		MoveToPoint([1883.2390])
-		MoveViewPoint([1707.3112],VERY_FAST)  // zum Punkt nach dem Wait
-		MoveToPoint([1939.2614])
-		MoveViewPoint([1317.3273],VERY_FAST)  // zum Punkt nach dem Wait
-		MoveToPoint([1707.2803])
-		Wait(1)
-		MoveToPoint([1650.3050])
-		MoveToPoint([1317.3273])
-    	
-		MoveViewPoint([842.3300],VERY_FAST)		
-		MoveToPoint([789.3303])
-		Wait(3)
-		StartDialogNoSet(Player1)
+  RESPONSE #100
+    CutSceneId("CPMelvin")
+    MoveViewPoint([1939.2614],VERY_FAST)
+    MoveToPoint([1883.2390])
+    
+    MoveViewPoint([1707.3112],VERY_FAST)
+    MoveToPoint([1939.2614])
+    
+    MoveViewPoint([1317.3273],VERY_FAST)
+    MoveToPoint([1707.2803])
+    
+    Wait(1)               
+    
+    MoveToPoint([1650.3050])
+    MoveToPoint([1317.3273])
+        
+    MoveViewPoint([842.3300],VERY_FAST)
+    MoveToPoint([789.3303])
+    SetGlobal("CPMelvinDoor","GLOBAL",1)
 END
 
 IF
-	True()
+  Global("CPMelvinDoor","GLOBAL",1)
+  See("DOOR3354")
+  OpenState("DOOR3354",FALSE)
+  !See([GOODCUTOFF])
+  !TargetUnreachable("DOOR3354")
 THEN
-	RESPONSE #100
-		CutSceneId(Player1)
-		Wait(1)
-		MoveToPoint([1907.2329])
-		MoveToPoint([1942.2492])
+  RESPONSE #100
+    CutSceneId("CPMelvin")
+    MoveToObjectNoInterrupt("DOOR3354")
+    Unlock("DOOR3354")
+    OpenDoor("DOOR3354")
+    Wait(2)
+    StartDialogNoSet(Player1)
+END
+
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player1)
+    Wait(1)
+    MoveToPoint([1907.2329])
+    MoveToPoint([1942.2492])
     MoveToPoint([1780.2710])
     MoveToPoint([1707.3112])
     MoveToPoint([1380.3270])
@@ -34,67 +53,66 @@ THEN
 END
 
 IF
-	True()
+  True()
 THEN
-	RESPONSE #100
-		CutSceneId(Player2)
-		Wait(1)
-		MoveToPoint([1907.2332])
-		MoveToPoint([1942.2495])
+  RESPONSE #100
+    CutSceneId(Player2)
+    Wait(1)
+    MoveToPoint([1907.2332])
+    MoveToPoint([1942.2495])
     MoveToPoint([1783.2713])
     MoveToPoint([1710.3115])
     MoveToPoint([990.3291])
 END
 
 IF
-	True()
+  True()
 THEN
-	RESPONSE #100
-		CutSceneId(Player3)
-		Wait(1)
-		MoveToPoint([1907.2335])
-		MoveToPoint([1942.2498])
+  RESPONSE #100
+    CutSceneId(Player3)
+    Wait(1)
+    MoveToPoint([1907.2335])
+    MoveToPoint([1942.2498])
     MoveToPoint([1786.2716])
     MoveToPoint([1713.3118])
-    MoveToPoint([1040.3349])  
+    MoveToPoint([1040.3349])
 END
 
 IF
-	True()
+  True()
 THEN
-	RESPONSE #100
-		CutSceneId(Player4)
-		Wait(1)
-		MoveToPoint([1907.2338])
-		MoveToPoint([1942.2501])
+  RESPONSE #100
+    CutSceneId(Player4)
+    Wait(1)
+    MoveToPoint([1907.2338])
+    MoveToPoint([1942.2501])
     MoveToPoint([1789.2719])
     MoveToPoint([1716.3121])
-    MoveToPoint([1040.3290])  
+    MoveToPoint([1040.3290])
 END
 
 IF
-	True()
+  True()
 THEN
-	RESPONSE #100
-		CutSceneId(Player5)
-		Wait(1)
-		MoveToPoint([1907.2341])
-		MoveToPoint([1942.2504])
+  RESPONSE #100
+    CutSceneId(Player5)
+    Wait(1)
+    MoveToPoint([1907.2341])
+    MoveToPoint([1942.2504])
     MoveToPoint([1792.2722])
     MoveToPoint([1719.3124])
-    MoveToPoint([1090.3349])  
+    MoveToPoint([1090.3349])
 END
 
 IF
-	True()
+  True()
 THEN
-	RESPONSE #100
-		CutSceneId(Player6)
-		Wait(1)
-		MoveToPoint([1907.2344])
-		MoveToPoint([1942.2507])
+  RESPONSE #100
+    CutSceneId(Player6)
+    Wait(1)
+    MoveToPoint([1907.2344])
+    MoveToPoint([1942.2507])
     MoveToPoint([1795.2725])
     MoveToPoint([1722.3127])
-    MoveToPoint([1090.3290])  
+    MoveToPoint([1090.3290])
 END
-

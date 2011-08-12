@@ -137,6 +137,7 @@ SAY NAME1 ~Kalen~
 SAY NAME2 ~Kalen~
 
 COMPILE ~Alienne/d/CPKalen.d~
+COMPILE ~Alienne/script/CPCUT_2.baf~
 
 // Area: Folterkeller in Beregost
 EXTEND_TOP ~CP0001.bcs~ ~Alienne/script/CP0001.baf~
