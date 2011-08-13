@@ -1,8 +1,12 @@
 IF
-GLOBAL("CPTRAVINExists","CP0001",0)
+GLOBAL("CPFolterkellerCRE","CP0001",0)
 THEN
 RESPONSE #100
-SetGlobal("CPTRAVINExists","CP0001",1)
+SetGlobal("CPFolterkellerCRE","CP0001",1)
 CreateCreature("CPTravin",[836.592],5)
 CreateCreature("CPKalen",[765.546],12)
+
+//Travins Wachen
+CreateCreature("CPFIGH02",[1286.852],4)
+CreateCreature("CPFIGH03",[9944.1019],9)
 END

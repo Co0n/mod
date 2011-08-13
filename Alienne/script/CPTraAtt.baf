@@ -1,14 +1,4 @@
 IF
-  Global("CPKalenVSTravin","GLOBAL",1)
-  Global("CPKalenVSTravinD","GLOBAL",0)
-  See([PC])
-THEN
-  RESPONSE #100
-  SetGlobal("CPKalenVSTravinD","GLOBAL",1)
-  StartDialogNoSet([PC])
-END
-
-IF
 	Allegiance(Myself,NEUTRAL)
 	OR(3)
 	Allegiance("CPTRAVIN",ENEMY)

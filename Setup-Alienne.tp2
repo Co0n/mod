@@ -104,6 +104,7 @@ SAY NAME2 ~Wache der XYZ~
 
 COMPILE ~Alienne/script/CPMelAtt.baf~
 
+
 // Setup Melvin
 COPY ~Alienne/cre/CPMELVIN.cre~ ~override/CPMELVIN.cre~
 
@@ -116,6 +117,20 @@ COMPILE ~Alienne/script/CPCUT_1.baf~
 
 // Area: Beregost, Zentrum
 EXTEND_TOP ~AR6700.bcs~ ~Alienne/script/AR6700.baf~
+
+
+// Setup Travins Leibgarde
+COPY ~Alienne/cre/CPFIGH02.cre~ ~override/CPFIGH02.cre~
+
+SAY NAME1 ~Wache der XYZ~
+SAY NAME2 ~Wache der XYZ~
+
+COPY ~Alienne/cre/CPFIGH03.cre~ ~override/CPFIGH03.cre~
+
+SAY NAME1 ~Wache der XYZ~
+SAY NAME2 ~Wache der XYZ~
+
+COMPILE ~Alienne/script/CPTraAtt.baf~
 
 
 // Setup Travin

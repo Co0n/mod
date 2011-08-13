@@ -8,7 +8,7 @@ IF ~~ THEN CPKalen Kalen.Travin
 == CPTravin ~Was Ihr nicht sagt! Immerhin waren es MEINE Leute, die das Mistgör eingefangen und hierher gebracht haben ...~
 == CPKalen ~... Und darüber hinaus vergessen, ihre Spuren zu beseitigen. Habt Ihr eine Ahnung, was ‚keine Zeugen’ bedeutet, Ihr Narr!?~
 == CPTravin ~Hütet Eure Zunge, wenn Ihr  mit mir sprecht! Ich dulde keine weiteren Ausbrüche dieser Art, oder Euch wird es bald nicht anderes ergehen als dieser Göre! (arroganter Wichtigtuer!)~ 
-== CPTravin ~Und nun kümmert Euch um diese Quälgeister die nach uns suchen! Cyric wird langsam ungeduldig, ich sollte mich wieder unserem ‚Gast’ widmen.~ DO ~ClearAllActions()StartCutSceneMode()StartCutScene("CPCUT_2")~ //Travin geht in den Folterkeller
+== CPTravin ~Und nun kümmert Euch um diese Quälgeister die nach uns suchen! Cyric wartet nicht gerne, ich werde mich wieder unserem ‚Gast’ widmen.~ DO ~ClearAllActions()StartCutSceneMode()StartCutScene("CPCUT_2")~ //Travin geht in den Folterkeller
 EXIT
 
 CHAIN
