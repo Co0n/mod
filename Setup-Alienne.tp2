@@ -125,6 +125,7 @@ SAY NAME1 ~Travin~
 SAY NAME2 ~Travin~
 
 COMPILE ~Alienne/d/CPTravin.d~
+COMPILE ~Alienne/script/CPTravin.baf~
 
 // Area: Folterkeller in Beregost
 EXTEND_TOP ~CP0001.bcs~ ~Alienne/script/CP0001.baf~
