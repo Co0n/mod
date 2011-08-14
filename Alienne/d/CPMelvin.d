@@ -37,9 +37,9 @@ END
 IF WEIGHT #1
 ~Global("CPJoinSideQuest","GLOBAL",2)~ 
 THEN BEGIN Sidequest
-SAY ~Hmpf, da wären wir also. Ich erinnere Euch nochmal daran, dass dieser Ort Geheim ist. Niemand weis, dass wir hier sind, und das soll auch so bleiben, verstanden?~
-= ~Und nun lasst uns endlich hinein gehen, bevor uns noch jemand sieht.~
-IF ~~ THEN DO ~SetGlobal("CPMelvinHQArrival","GLOBAL",1)AddJournalEntry(@10013,QUEST)EscapeAreaMove("CP0001",738,363,4)~ EXIT
+SAY ~Hmpf, da wären wir also. Ich erinnere Euch nochmal daran, dass dieser Ort geheim ist. Niemand weiß, dass wir hier sind und das soll auch so bleiben, verstanden?~
+= ~Hier, nehmt diesen Schlüssel. Und nun lasst uns endlich hinein gehen, bevor uns noch jemand sieht.~
+IF ~~ THEN DO ~GiveItem("CPMelKey",LastTalkedToBy())SetGlobal("CPMelvinHQArrival","GLOBAL",1)AddJournalEntry(@10013,QUEST)EscapeAreaMove("CP0001",738,363,4)~ EXIT
 END
 
 IF ~~ THEN BEGIN Mage
