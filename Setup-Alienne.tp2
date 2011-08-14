@@ -146,6 +146,20 @@ COMPILE ~Alienne/script/CPTravin.baf~
 EXTEND_TOP ~CP0001.bcs~ ~Alienne/script/CP0001.baf~
 
 
+// Setup Kalens Leibgarde
+COPY ~Alienne/cre/CPRANG01.cre~ ~override/CPRANG01.cre~
+
+SAY NAME1 ~Wache der XYZ~
+SAY NAME2 ~Wache der XYZ~
+
+COPY ~Alienne/cre/CPCLRK02.cre~ ~override/CPCLRK02.cre~
+
+SAY NAME1 ~Wache der XYZ~
+SAY NAME2 ~Wache der XYZ~
+
+COMPILE ~Alienne/script/CPKalAtt.baf~
+
+
 // Setup Kalen
 COPY ~Alienne/cre/CPKALEN.cre~ ~override/CPKALEN.cre~
 
@@ -154,6 +168,7 @@ SAY NAME2 ~Kalen~
 
 COMPILE ~Alienne/d/CPKalen.d~
 COMPILE ~Alienne/script/CPCUT_2.baf~
+COMPILE ~Alienne/script/CPKalen.baf~
 
 // Area: Folterkeller in Beregost
 EXTEND_TOP ~CP0001.bcs~ ~Alienne/script/CP0001.baf~

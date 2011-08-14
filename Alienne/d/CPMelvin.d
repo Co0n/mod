@@ -99,18 +99,5 @@ END
 IF ~~ THEN BEGIN EndTalkQuest
 SAY ~Wunderbar, Ihr habt meine Erwartungen bei Weitem übertroffen! Um ehrlich zu sein habe ich nicht mit Eurer Rückkehr gerechnet, allerdings scheint ihr tatsächlich ganz brauchbare Fähigkeiten zu besitzen.
 Alles weitere sollten wir mit Travin besprechen, kommt!~
-// Melvin sollte die Gruppe nun in einer Zwischensequenz zum Unterschlupf führen.
 IF ~~ THEN DO ~ClearAllActions()StartCutSceneMode()StartCutScene("CPCUT_1")~ EXIT
 END
-
-
-
-//Weiter (Kalen hat die Gruppe bemerkt)
-
-//Kalen: „Was bei den Höllen ...Fremde in unserem Versteck! Zu den Waffen!
-
-//Melvin: „Was? Diese Leute hatten Brols Befehle bei sich!
-
-//Kalen: „Sie haben Euch hinters Licht geführt, kleiner Tor! Los, kümmert Euch um sie! Ich werde dafür sorgen, dass alle übrigen Spuren verwischt werden.“
-
-//Dialog ende (Kalen und zwei der Wachen verlassen das Haus, während Melvin und die verbliebenen Wachen die Gruppe angreifen) 

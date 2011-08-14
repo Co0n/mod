@@ -12,8 +12,22 @@ IF ~~ THEN CPKalen Kalen.Travin
 EXIT
 
 CHAIN
-IF ~NumTimesTalkedTo(0)~ THEN CPKalen Kalen.Melvin
-~Was bei den Höllen ... Ihr dort! Wer seid Ihr? Was habt Ihr hier zu suchen? Sprecht oder sterbt!~
+IF ~NumTimesTalkedTo(0)Global("CPMelvinHQArrival","GLOBAL",1)~ THEN CPKalen Kalen.Melvin
+~Was bei den neun Höllen... Ihr dort! Wer seid Ihr? Was habt Ihr hier zu suchen? Sprecht oder sterbt!~
 == CPMelvin ~Immer mit der Ruhe Kalen! Das ist die Verstärkung aus Amn, ich habe alles überprüft.~
-== CPKalen ~Sie haben Euch hinters Licht geführt, kleiner Tor!  Los, kümmert Euch um sie! Ich werde dafür sorgen, dass alle übrigen Spuren verwischt werden.~
+== CPKalen ~Einfältiger Tölpel! Das ist die Gruppe die sich nach dem Mädchen umgehört habt, die Beschreibung passt genau! Kann man Euch denn keine Sekunde aus den Augen lassen?~
+== CPKalen ~Worauf wartet Ihr noch? Tötet sie, bevor sie fliehen!~ DO ~Enemy()~ 
 EXIT
+
+IF ~NumTimesTalkedTo(0)Class(LastTalkedToBy,MAGE_ALL)~ THEN
+SAY ~Was bei den neun Höllen... Ihr dort! Wer seid Ihr? Was habt ihr hier zu suchen? Sprecht oder sterbt!~
+= ~Moment, Ihr... Ihr seid ein MAGIER? Wie könnt Ihr es wagen hier einzudringen?! WACHEN, ZUM ANGRIFF!~
+IF ~~ THEN DO ~Enemy()~ EXIT
+END
+
+
+IF ~NumTimesTalkedTo(0)Class(LastTalkedToBy,MAGE_ALL)~ THEN
+SAY ~Was bei den neun Höllen... Ihr dort! Wer seid Ihr? Was habt ihr hier zu suchen? Sprecht oder sterbt!~
+= ~Moment, Ihr... Ihr seid doch die Gruppe die sich in Beregost nach uns umgehört hat! Wie könnt Ihr es wagen hier einzudringen?! WACHEN, ZUM ANGRIFF!~
+IF ~~THEN DO ~Enemy()~ EXIT
+END

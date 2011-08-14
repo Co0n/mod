@@ -6,7 +6,12 @@ SetGlobal("CPFolterkellerCRE","CP0001",1)
 CreateCreature("CPTravin",[836.592],5)
 CreateCreature("CPKalen",[765.546],12)
 
+//Kalens Wachen
+CreateCreature("CPCLRK02",[500.411],9)
+CreateCreature("CPRANG01",[880.416],5)
+
 //Travins Wachen
 CreateCreature("CPFIGH02",[1286.852],4)
-CreateCreature("CPFIGH03",[9944.1019],9)
+CreateCreature("CPFIGH03",[944.1019],9)
+CreateCreature("CPRANG02",[1437.861],6)
 END
