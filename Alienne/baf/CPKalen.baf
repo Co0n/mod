@@ -9,3 +9,12 @@ THEN
 		Enemy()
 		Attack(NearestEnemyOf(Myself))
 END
+
+IF
+  Global("CPKalenD","GLOBAL",0)
+  Global("CPMelvinHQArrival","GLOBAL",0)
+THEN
+  RESPONSE #100
+  SetGlobal("CPKalenD","GLOBAL",1)
+  StartDialogNoSet([PC])
+END

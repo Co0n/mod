@@ -1,10 +1,10 @@
 IF
 	Allegiance(Myself,NEUTRAL)
 	OR(3)
+	Allegiance("CPKALEN",ENEMY)
 	Allegiance("CPMELVIN",ENEMY)
 	Allegiance("CPCLRK01",ENEMY)
 	Allegiance("CPFIGH01",ENEMY)
-	Allegiance("CPKALEN",ENEMY)
 THEN
 	RESPONSE #100
 		Enemy()

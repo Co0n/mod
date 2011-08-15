@@ -1,5 +1,5 @@
 @10000 = ~Aliennes Entfühung
-
+                  Zirkeln von Anmana
 Nach meiner Rückkehr aus den Minen von Nashkell traf ich eine Elfe names Taldrin, die mich verzweifelt um Hilfe bat.
 Ich konnte mich jedoch nicht darauf einlassen ohne meine aktuellen Ziele aus den Augen zu verlieren.
 Wenn ich es mir anders überlege sollte ich sie noch mal in Nashkell aufsuchen.~
@@ -20,7 +20,7 @@ Ich sollte schnell mit der Suche beginnen bevor sich die Spur verliert.~
 @10003 = ~Aliennes Entfühung
 
 Der Schankwirt der Roten Gabe verwies mich auf einen grimmigen Kerl namens Brol, der erst seit kurzem die Schenke besuchte. Mein Gespräch mit ihm verlief jedoch alles andere als hilfreich. Als er bemerkte, dass ich über magische Fähigkeiten verfüge griff er mich an.
-Er deutete an ein Magierkiller zu sein, ein Krieger der auf das Töten von Magiern spezialisiert ist. Offensichtlich brachte er uns in Verbindung mit dem Entführten Mädchen. Ich habe in seinem Gepäck jedoch einen Interessanten Hinweis gefunden. Anscheinend gehörte er zu einer Gruppe namens -- NAME DER ORGANISATION -- welche es auf Alienne abgesehen hat. Ich weiß nicht, was sie von ihr wollen, aber ich sollte es schnell herausfinden.
+Er deutete an ein Magierkiller zu sein, ein Krieger der auf das Töten von Magiern spezialisiert ist. Offensichtlich brachte er uns in Verbindung mit dem Entführten Mädchen. Ich habe in seinem Gepäck jedoch einen Interessanten Hinweis gefunden. Anscheinend gehörte er zu einer Gruppe namens "Zirkeln von Anmana" welche es auf Alienne abgesehen hat. Ich weiß nicht, was sie von ihr wollen, aber ich sollte es schnell herausfinden.
 Brol sollte einen Halbling namens Melvin in Beregost treffen, vielleicht kann ich ihn mit diesem Schreiben täuschen um Aliennes Aufenthaltsort zu erfahren.~
 
 @10004 = ~Aliennes Entfühung
@@ -32,7 +32,7 @@ Ich sollte mich schleunigst auf die Suche nach Brols Kontaktmann in Beregost mac
 @10005 = ~Aliennes Entfühung
 
 Der Schankwirt der Roten Gabe verwies mich auf einen grimmigen Kerl namens Brol, der erst seit kurzem die Schenke besuchte. Mein Gespräch mit ihm verlief jedoch alles andere als hilfreich. Er griff mich an, sodass mir nichts anderes übrig blieb als ihn zu töten.
-Ich habe in seinem Gepäck jedoch einen Interessanten Hinweis gefunden. Anscheinend gehörte er zu einer Gruppe namens -- NAME DER ORGANISATION -- welche es auf Alienne abgesehen hat. Ich weiß nicht, was sie von ihr wollen, aber ich sollte es schnell herausfinden.
+Ich habe in seinem Gepäck jedoch einen Interessanten Hinweis gefunden. Anscheinend gehörte er zu einer Gruppe namens "Zirkeln von Anmana" welche es auf Alienne abgesehen hat. Ich weiß nicht, was sie von ihr wollen, aber ich sollte es schnell herausfinden.
 Brol sollte einen Halbling namens Melvin in Beregost treffen, vielleicht kann ich ihn mit diesem Schreiben täuschen um Aliennes Aufenthaltsort zu erfahren.~
 
 @10006 = ~Aliennes Entfühung
@@ -71,7 +71,7 @@ Wenn ich Melvin den Stab übergebe wird er glauben, dass Thalantyr tot ist und mi
 
 @10013 = ~Aliennes Entfühung
 
-Melvin hat sich von mir täuschen lassen und mich wie versprochen zum Versteck der -- NAME DER ORGANISATION -- geführt. Ich sollte mich beeilen und die Entführer konfrontieren, hoffentlich kommen wir nicht zu spät.~
+Melvin hat sich von mir täuschen lassen und mich wie versprochen zum Versteck des Zirkels geführt. Ich sollte mich beeilen und die Entführer konfrontieren, hoffentlich kommen wir nicht zu spät.~
 // END Melvin Sidequest
 
 @10014 = ~Aliennes Entfühung

@@ -98,7 +98,7 @@ END
 
 IF ~~ THEN BEGIN Explain
 SAY ~Meine Auftraggeber haben mich nach Beregost geschickt um hier ihre Interessen zu vertreten. In den nächsten Tagen sollte ich mich mit meinem Kontaktmann treffen um alles weitere zu vereinbaren.~
-= ~Nun, Ihr fragt Euch sicher, was das mit dem Mädchen zu tun hat das Ihr sucht. Seht, die Organisation für die ich arbeite versteht sich darauf bestimmte Personen... verschwinden zu lassen. Man sagte mir bereits, dass man nahe Nashkell ein neues Ziel ausfindig gemacht habe und es schleunigst zu unserer... Zweigstelle bringen wolle.~
+= ~Nun, Ihr fragt Euch sicher, was das mit dem Mädchen zu tun hat das Ihr sucht. Seht, die Organisation für die ich arbeite versteht sich darauf bestimmte Personen... verschwinden zu lassen. Man kennt uns unter dem Namen "Zirkeln von Anmana". Man sagte mir bereits, dass man nahe Nashkell ein neues Ziel ausfindig gemacht habe und es schleunigst zu unserer... Zweigstelle bringen wolle.~
 = ~Laut meinen Auftraggebern handelte es sich dabei um eine junge Elfengöre. Ich nehme an, dass sie das Mädchen ist von dem Ihr vorhin spracht.
 Die gute Nachricht ist, dass ich Euch sagen kann wo sie sich gerade befindet...~
 = ~Wie das nunmal so ist gibt es aber auch immer eine schlechte Nachricht. Unsere Organisation versteht sich auf das Ausschalten von Personen mit magischer Begabung. Wir werden ausgebildet unsere Ziele schnell und präzise zu erledigen.

@@ -186,7 +186,7 @@ SAY NAME2 ~Brols Befehle~
 SAY DESC ~EINSATZBEFEHL
 
 Brol, Ihr werdet hiermit nach Beregost beordert um Travin vor Ort zu unterstützen.
-Ich möchte, dass Ihr mir regelmäßig Bericht über die Angelegenheiten -- NAME DER ORGANISATION -- vor Ort erstattet. 
+Ich möchte, dass Ihr mir regelmäßig Bericht über die Angelegenheiten des Zirkels vor Ort erstattet. 
 Mir sind Gerüchte zu Ohren gekommen, dass man sich dort nicht an die vereinbarte Vorgehensweise hält.
 
 Brol, Travin hat ein neues Ziel nahe Nashkell ausgemacht und plant in kürze zuzugreifen.
@@ -199,7 +199,7 @@ Diesem Brief liegt ein entsprechendes Schreiben bei das euch als Mitglied unsere
 Dennoch werdet Ihr Euch dem üblichen Prozedere unterziehen müssen.
 
 Entäuscht uns nicht Brol.
-Gezeichnet Z~
+Gezeichnet Z., Anführer des Zirkels von Anmana~
 
 
 // Setup Item: Thalantyrs Stab

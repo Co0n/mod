@@ -7,5 +7,5 @@ THEN
     JumpToPoint([1279.1126])
     Face(6)
     SetGlobal("CPKalenVSTravin","GLOBAL",1)
-    ActionOverride("CPKalen",StartDialog("CPKalen",[PC]))
+    ActionOverride("CPKalen",StartDialogNoSet([PC]))
 END
