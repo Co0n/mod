@@ -3,8 +3,9 @@ Jeder der etwas entsprechendes mitzuteilen hat kann diese Readme gerne editieren
 
 
 
-1) Ich habe das Präfix "CP" für das Projekt auf blackwyrmlair reserviert.
+1) Ich habe das Prï¿½fix "CP" fï¿½r das Projekt auf blackwyrmlair reserviert.
 Alle Variablen und Dateinamen sollten also im Rahmen dieses Projekts mit "CP" beginnen um die
-Kompatibilität zu anderen Mods zu gewährleisten.
+Kompatibilitï¿½t zu anderen Mods zu gewï¿½hrleisten.
 
+2) Forum: www.co0n.de/forum
 
