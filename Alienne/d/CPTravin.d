@@ -13,7 +13,7 @@ END
 
 CHAIN
 IF ~~ THEN CPTravin Ritual
-~HA! Diese Göre ist dem großen Cyric, dem Bezwinger Mystras versprochen! Ich werde nicht zulassen, dass Ihr das Ritual stört! Dank mir konnte er sich die letzten Tage an ihrem Schmerz, an ihren unermesslichen Qualen laben. Das ist die Strafe Cyrics für alljene die Mächte anstreben, die den Dienern der Götter vorbehalten sind! Cyric belohnt seine Anhänger fürstlich, ich kann die Macht, die er mir verleiht förmlich spüren! Jedes Wimmern, jedes Stöhnen und jeder qualvolle Schrei dieser Heidin lässt Cyric erstarken!~
+~HA! Diese Göre ist dem großen Cyric versprochen! Ich werde nicht zulassen, dass Ihr das Ritual stört! Dank mir konnte er sich die letzten Tage an ihrem Schmerz, an ihren unermesslichen Qualen laben. Das ist die Strafe Cyrics für alljene die Mächte anstreben, die den Dienern der Götter vorbehalten sind! Cyric belohnt seine Anhänger fürstlich, ich kann die Macht, die er mir verleiht förmlich spüren! Jedes Wimmern, jedes Stöhnen und jeder qualvolle Schrei dieser Heidin lässt Cyric erstarken!~
 = ~Hihihi, Ihr kommt zu spät, der Tod dieser Göre ist unausweichlich, dafür befindet sie sich schon zu lange in ... meiner Obhut. (Travin  grinst euch böse an.)~
 END
 ++ ~MONSTER! Dafür werdet ihr büßen!! Ihr werdet niemandem mehr Leid zufügen!~ + Fight
