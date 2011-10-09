@@ -61,6 +61,14 @@ END
 //  Setup CREATURES  \\
 // ################# \\
 
+// Setup Alienne
+COPY ~Alienne/cre/CPALIENN.cre~ ~override/CPALIENN.cre~
+
+// Name
+SAY NAME1 ~Alienne~
+SAY NAME2 ~Alienne~
+
+COMPILE ~Alienne/d/CPAlienn.d~
 
 // Setup Taldrin
 COPY ~Alienne/cre/CPTALDR.cre~ ~override/CPTALDR.cre~
@@ -75,6 +83,8 @@ COMPILE ~Alienne/d/CPWirt2.d~
 COMPILE ~Alienne/d/CPWirt3.d~
 COMPILE ~Alienne/d/CPThalan.d~
 
+// Area: North of Nashkell
+EXTEND_TOP ~AR3200.bcs~ ~Alienne/baf/AR3200.baf~
 // Area: Nashkel
 EXTEND_TOP ~AR3700.bcs~ ~Alienne/baf/AR3700.baf~ 
 

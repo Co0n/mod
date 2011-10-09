@@ -1,0 +1,8 @@
+IF
+GLOBAL("CPNorthNashkellCRE","AR3200",0)
+THEN
+RESPONSE #100
+SetGlobal("CPNorthNashkellCRE","AR3200",1)
+CreateCreature("CPTaldr",[925.2932],12)
+CreateCreature("CPAlienn",[851.2906],10)
+END
